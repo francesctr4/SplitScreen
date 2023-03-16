@@ -2,6 +2,7 @@
 #include "Window.h"
 #include "Render.h"
 #include "Input.h"
+#include "Scene.h"
 
 #include "Defs.h"
 #include "Log.h"
@@ -80,38 +81,13 @@ bool Render::Update(float dt)
 	float speed = 0.2 * dt;
 
 	ListItem<Camera*>* item = app->render->cameras.start;
-	for (; item != nullptr; item = item->next)
+
+	for (int i = 0; item != nullptr; item = item->next, i++)
 	{
-		if (app->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT)
-			item->data->pos.y -= ceil(speed);
 
-		if (app->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT)
-			item->data->pos.y += ceil(speed);
-
-		if (app->input->GetKey(SDL_SCANCODE_LEFT) == KEY_REPEAT)
-			item->data->pos.x -= ceil(speed);
-
-		if (app->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT)
-			item->data->pos.x += ceil(speed);
-
-		if (item->data->pos.x <= 0) item->data->pos.x = 0;
-		if (item->data->pos.y <= 0) item->data->pos.y = 0;
-		if (item->data->pos.x + item->data->viewport.w >= 2048) item->data->pos.x = 2048 - item->data->viewport.w;
-		if (item->data->pos.y + item->data->viewport.h >= 768) item->data->pos.y = 768 - item->data->viewport.h;
+		CenterCamera(item, i);
 
 	}
-
-	if (app->input->GetKey(SDL_SCANCODE_W) == KEY_REPEAT)
-		app->render->cameras.At(0)->data->pos.y -= ceil(speed);
-
-	if (app->input->GetKey(SDL_SCANCODE_S) == KEY_REPEAT)
-		app->render->cameras.At(0)->data->pos.y += ceil(speed);
-
-	if (app->input->GetKey(SDL_SCANCODE_A) == KEY_REPEAT)
-		app->render->cameras.At(0)->data->pos.x -= ceil(speed);
-
-	if (app->input->GetKey(SDL_SCANCODE_D) == KEY_REPEAT)
-		app->render->cameras.At(0)->data->pos.x += ceil(speed);
 
 	return true;
 }
@@ -192,6 +168,35 @@ Camera* Render::GetCamera()
 			return item->data;
 		}
 	}
+}
+
+void Render::CenterCamera(ListItem<Camera*>* item, int player) {
+
+	// Center Camera
+
+	int midPlayerPosX = (32 / 2) + app->scene->players[player]->position.x;
+	int midPlayerPosY = (32 / 2) + app->scene->players[player]->position.y;
+
+	int camX = -item->data->pos.x + item->data->viewport.x;
+	int camY = -item->data->pos.y + item->data->viewport.y;
+
+	if (midPlayerPosX > -item->data->pos.x + (item->data->viewport.w / 2) || midPlayerPosX < item->data->pos.x + (item->data->viewport.w / 2))
+	{
+		item->data->pos.x = (midPlayerPosX - (item->data->viewport.w / 2));
+	}
+
+	if (midPlayerPosY > -item->data->pos.y + (item->data->viewport.h / 2) || midPlayerPosY < -item->data->pos.y + (item->data->viewport.h / 2))
+	{
+		item->data->pos.y = (midPlayerPosY - (item->data->viewport.h / 2));
+	}
+
+	// Camera limits
+
+	if (item->data->pos.x <= 0) item->data->pos.x = 0;
+	if (item->data->pos.y <= 0) item->data->pos.y = 0;
+	if (item->data->pos.x + item->data->viewport.w >= 2048) item->data->pos.x = 2048 - item->data->viewport.w;
+	if (item->data->pos.y + item->data->viewport.h >= 768) item->data->pos.y = 768 - item->data->viewport.h;
+
 }
 
 // Blit to screen

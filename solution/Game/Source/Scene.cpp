@@ -7,8 +7,6 @@
 #include "Scene.h"
 #include "EntityManager.h"
 #include "Map.h"
-#include "PathFinding.h"
-#include "GuiManager.h"
 
 #include "Defs.h"
 #include "Log.h"
@@ -29,9 +27,14 @@ bool Scene::Awake(pugi::xml_node& config)
 	bool ret = true;
 
 	//L02: DONE 3: Instantiate the player using the entity manager
-	if (config.child("player")) {
-		player = (Player*)app->entityManager->CreateEntity(EntityType::PLAYER);
-		player->parameters = config.child("player");
+
+	for (pugi::xml_node playerNode = config.child("player"); playerNode; playerNode = playerNode.next_sibling("player"))
+	{
+		Player* player = (Player*)app->entityManager->CreateEntity(EntityType::PLAYER);
+		player->parameters = playerNode;
+
+		players.Add(player);
+
 	}
 	
 	return ret;
@@ -44,8 +47,6 @@ bool Scene::Start()
 	
 	// L03: DONE: Load map
 	bool retLoad = app->map->Load();
-
-	map = app->tex->Load("Assets/Textures/SimpleMap.png");
 
 	return true;
 }
@@ -62,8 +63,6 @@ bool Scene::Update(float dt)
 	// Draw map
 	app->map->Draw();
 
-	//app->render->DrawTexture(map,0,0);
-
 	return true;
 }
 
@@ -76,24 +75,6 @@ bool Scene::PostUpdate()
 		ret = false;
 
 	return ret;
-}
-
-bool Scene::OnGuiMouseClickEvent(GuiControl* control)
-{
-	// L15: DONE 5: Implement the OnGuiMouseClickEvent method
-	LOG("Event by %d ",control->id);
-
-	switch (control->id)
-	{
-	case 1:
-		LOG("Button 1 click");
-		break;
-	case 2:
-		LOG("Button 2 click");
-		break;
-	}
-
-	return true;
 }
 
 // Called before quitting

@@ -45,13 +45,10 @@ public:
 	// Set background color
 	void SetBackgroundColor(SDL_Color color);
 
-	// L03: DONE 6: Declare Load / Save methods
-	/*bool LoadState(pugi::xml_node&);
-	bool SaveState(pugi::xml_node&);*/
-
 	void AddCamera(iPoint bounds, SDL_Rect viewport);
 	void ClearCameras();
 	Camera* GetCamera();
+	void CenterCamera(ListItem<Camera*>* item, int player);
 
 public:
 

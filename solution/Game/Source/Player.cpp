@@ -7,7 +7,6 @@
 #include "Scene.h"
 #include "Log.h"
 #include "Point.h"
-#include "Physics.h"
 
 Player::Player() : Entity(EntityType::PLAYER)
 {
@@ -21,13 +20,18 @@ Player::~Player() {
 bool Player::Awake() {
 
 	//L02: DONE 1: Initialize Player parameters
-	//pos = position;
-	//texturePath = "Assets/Textures/player/idle1.png";
 
 	//L02: DONE 5: Get Player parameters from XML
 	position.x = parameters.attribute("x").as_int();
 	position.y = parameters.attribute("y").as_int();
 	texturePath = parameters.attribute("texturepath").as_string();
+
+	id = parameters.attribute("id").as_int();
+
+	if (SString(parameters.attribute("keys").as_string()) == SString("wasd")) keys = InputKeys::WASD;
+	if (SString(parameters.attribute("keys").as_string()) == SString("tfgh")) keys = InputKeys::TFGH;
+	if (SString(parameters.attribute("keys").as_string()) == SString("ijkl")) keys = InputKeys::IJKL;
+	if (SString(parameters.attribute("keys").as_string()) == SString("arrows")) keys = InputKeys::ARROWS;
 
 	return true;
 }
@@ -57,24 +61,12 @@ bool Player::Update()
 
 	// L07 DONE 5: Add physics to the player - updated player position using physics
 
-	int speed = 10; 
+	int speed = 5; 
 	b2Vec2 vel = b2Vec2(0, -GRAVITY_Y); 
 
 	//L02: DONE 4: modify the position of the player using arrow keys and render the texture
-	if (app->input->GetKey(SDL_SCANCODE_W) == KEY_REPEAT) {
-		//
-	}
-	if (app->input->GetKey(SDL_SCANCODE_S) == KEY_REPEAT) {
-		//
-	}
-		
-	if (app->input->GetKey(SDL_SCANCODE_A) == KEY_REPEAT) {
-		vel = b2Vec2(-speed, -GRAVITY_Y);
-	}
 
-	if (app->input->GetKey(SDL_SCANCODE_D) == KEY_REPEAT) {
-		vel = b2Vec2(speed, -GRAVITY_Y);
-	}
+	HandleInput(keys, vel, speed);
 
 	//Set the velocity of the pbody of the player
 	pbody->body->SetLinearVelocity(vel);
@@ -111,7 +103,49 @@ void Player::OnCollision(PhysBody* physA, PhysBody* physB) {
 			LOG("Collision UNKNOWN");
 			break;
 	}
-	
 
+}
+
+void Player::HandleInput(InputKeys keys, b2Vec2& vel, int speed) {
+
+	if (id <= app->render->cameras.Count()) {
+
+		if (keys == InputKeys::WASD) {
+
+			if (app->input->GetKey(SDL_SCANCODE_W) == KEY_REPEAT) vel = b2Vec2(GRAVITY_X, -speed);
+			if (app->input->GetKey(SDL_SCANCODE_S) == KEY_REPEAT) vel = b2Vec2(GRAVITY_X, speed);
+			if (app->input->GetKey(SDL_SCANCODE_A) == KEY_REPEAT) vel = b2Vec2(-speed, -GRAVITY_Y);
+			if (app->input->GetKey(SDL_SCANCODE_D) == KEY_REPEAT) vel = b2Vec2(speed, -GRAVITY_Y);
+
+		}
+
+		if (keys == InputKeys::TFGH) {
+
+			if (app->input->GetKey(SDL_SCANCODE_T) == KEY_REPEAT) vel = b2Vec2(GRAVITY_X, -speed);
+			if (app->input->GetKey(SDL_SCANCODE_G) == KEY_REPEAT) vel = b2Vec2(GRAVITY_X, speed);
+			if (app->input->GetKey(SDL_SCANCODE_F) == KEY_REPEAT) vel = b2Vec2(-speed, -GRAVITY_Y);
+			if (app->input->GetKey(SDL_SCANCODE_H) == KEY_REPEAT) vel = b2Vec2(speed, -GRAVITY_Y);
+
+		}
+
+		if (keys == InputKeys::IJKL) {
+
+			if (app->input->GetKey(SDL_SCANCODE_I) == KEY_REPEAT) vel = b2Vec2(GRAVITY_X, -speed);
+			if (app->input->GetKey(SDL_SCANCODE_K) == KEY_REPEAT) vel = b2Vec2(GRAVITY_X, speed);
+			if (app->input->GetKey(SDL_SCANCODE_J) == KEY_REPEAT) vel = b2Vec2(-speed, -GRAVITY_Y);
+			if (app->input->GetKey(SDL_SCANCODE_L) == KEY_REPEAT) vel = b2Vec2(speed, -GRAVITY_Y);
+
+		}
+
+		if (keys == InputKeys::ARROWS) {
+
+			if (app->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT) vel = b2Vec2(GRAVITY_X, -speed);
+			if (app->input->GetKey(SDL_SCANCODE_DOWN) == KEY_REPEAT) vel = b2Vec2(GRAVITY_X, speed);
+			if (app->input->GetKey(SDL_SCANCODE_LEFT) == KEY_REPEAT) vel = b2Vec2(-speed, -GRAVITY_Y);
+			if (app->input->GetKey(SDL_SCANCODE_RIGHT) == KEY_REPEAT) vel = b2Vec2(speed, -GRAVITY_Y);
+
+		}
+
+	}
 
 }

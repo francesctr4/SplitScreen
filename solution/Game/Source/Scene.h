@@ -3,8 +3,6 @@
 
 #include "Module.h"
 #include "Player.h"
-#include "Item.h"
-#include "GuiButton.h"
 
 struct SDL_Texture;
 
@@ -47,28 +45,18 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	// Define multiple Gui Event methods
-	bool OnGuiMouseClickEvent(GuiControl* control);
-
 	void CreateCameras(DisplayType display, Render* render);
 
 public:
 
 	//L02: DONE 3: Declare a Player attribute 
-	Player* player;
+	
+	List<Player*> players;
 
 private:
-	SDL_Texture* map;
-	SDL_Texture* mouseTileTex = nullptr;
-	SDL_Texture* originTex = nullptr;
+	
 
-	// L12: Debug pathfing
-	iPoint origin;
-	bool originSelected = false;
 
-	// L15: DONE 2: Declare a GUI Button and create it using the GuiManager
-	GuiButton* button1; 
-	GuiButton* button2;
 };
 
 #endif // __SCENE_H__

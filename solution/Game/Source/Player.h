@@ -3,7 +3,17 @@
 
 #include "Entity.h"
 #include "Point.h"
+#include "Physics.h"
 #include "SDL/include/SDL.h"
+
+enum class InputKeys {
+
+	WASD,
+	TFGH,
+	IJKL,
+	ARROWS
+
+};
 
 struct SDL_Texture;
 
@@ -26,8 +36,11 @@ public:
 	// L07 DONE 6: Define OnCollision function for the player. Check the virtual function on Entity class
 	void OnCollision(PhysBody* physA, PhysBody* physB);
 
+	void HandleInput(InputKeys keys, b2Vec2& vel, int speed);
+
 
 public:
+
 
 private:
 
@@ -39,6 +52,9 @@ private:
 	PhysBody* pbody;
 
 	int pickCoinFxId;
+
+	int id;
+	InputKeys keys;
 
 };
 
