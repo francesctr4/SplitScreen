@@ -6,6 +6,7 @@
 #include "Physics.h"
 #include "SDL/include/SDL.h"
 
+// Split Screen
 enum class InputKeys {
 
 	WASD,
@@ -36,6 +37,7 @@ public:
 	// L07 DONE 6: Define OnCollision function for the player. Check the virtual function on Entity class
 	void OnCollision(PhysBody* physA, PhysBody* physB);
 
+	// Split Screen
 	void HandleInput(InputKeys keys, b2Vec2& vel, int speed);
 
 
@@ -53,6 +55,7 @@ private:
 
 	int pickCoinFxId;
 
+	// Split Screen
 	int id;
 	InputKeys keys;
 

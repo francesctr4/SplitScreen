@@ -43,6 +43,8 @@ bool Scene::Awake(pugi::xml_node& config)
 // Called before the first frame
 bool Scene::Start()
 {
+	// Split Screen
+	// Change the DisplayType to control how many screens will be loaded.
 	CreateCameras(DisplayType::FOUR_SCREENS, app->render);
 	
 	// L03: DONE: Load map
@@ -85,6 +87,7 @@ bool Scene::CleanUp()
 	return true;
 }
 
+// Split Screen
 void Scene::CreateCameras(DisplayType display, Render* render)
 {
 	switch (display)

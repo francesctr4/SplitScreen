@@ -6,15 +6,17 @@
 
 struct SDL_Texture;
 
+// Split Screen
 enum class DisplayType
 {
+
 	ONE_SCREEN,
 	TWO_HORIZONTAL,
 	TWO_VERTICAL,
 	THREE_LEFT,
 	THREE_CENTERED,
 	THREE_RIGHT,
-	FOUR_SCREENS,
+	FOUR_SCREENS
 
 };
 
@@ -45,17 +47,13 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
+	// Split Screen
 	void CreateCameras(DisplayType display, Render* render);
 
 public:
 
-	//L02: DONE 3: Declare a Player attribute 
-	
+	// Split Screen
 	List<Player*> players;
-
-private:
-	
-
 
 };
 

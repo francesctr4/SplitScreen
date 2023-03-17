@@ -106,6 +106,7 @@ void Player::OnCollision(PhysBody* physA, PhysBody* physB) {
 
 }
 
+// Split Screen
 void Player::HandleInput(InputKeys keys, b2Vec2& vel, int speed) {
 
 	if (id <= app->render->cameras.Count()) {

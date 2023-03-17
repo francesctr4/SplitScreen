@@ -47,9 +47,6 @@ bool Render::Awake(pugi::xml_node& config)
 	//initialise the SDL_ttf library
 	TTF_Init();
 
-	//load a font into memory
-	font = TTF_OpenFont("Assets/Fonts/arial/arial.ttf", 25);
-
 	return ret;
 }
 
@@ -104,9 +101,6 @@ bool Render::CleanUp()
 {
 	cameras.Clear();
 
-    // Free the font
-	TTF_CloseFont(font);
-
 	//we clean up TTF library
 	TTF_Quit();
 
@@ -123,8 +117,6 @@ void Render::SetBackgroundColor(SDL_Color color)
 
 void Render::SetViewPort(const SDL_Rect& rect)
 {
-	//SDL_RenderSetViewport(renderer, &rect);
-
 	ListItem<Camera*>* item = cameras.start;
 	for (; item != cameras.end; item = item->next)
 	{
@@ -135,8 +127,6 @@ void Render::SetViewPort(const SDL_Rect& rect)
 
 void Render::ResetViewPort()
 {
-	//SDL_RenderSetViewport(renderer, &viewport);
-
 	ListItem<Camera*>* item = cameras.start;
 	for (; item != cameras.end; item = item->next)
 	{
@@ -155,19 +145,6 @@ void Render::AddCamera(iPoint bounds, SDL_Rect viewport)
 void Render::ClearCameras()
 {
 	cameras.Clear();
-}
-
-Camera* Render::GetCamera()
-{
-	ListItem<Camera*>* item = cameras.start;
-	for (; item != nullptr; item = item->next)
-	{
-		if (item->data->assigned == false)
-		{
-			item->data->assigned = true;
-			return item->data;
-		}
-	}
 }
 
 void Render::CenterCamera(ListItem<Camera*>* item, int player) {
@@ -207,7 +184,7 @@ bool Render::DrawTexture(SDL_Texture* texture, int x, int y, const SDL_Rect* sec
 	ListItem<Camera*>* it = cameras.start;
 	for (; it != nullptr; it = it->next)
 	{
-		// TODO 5: Here you have the x and y that you receive in the function. You also have to use
+		// Here you have the x and y that you receive in the function. You also have to use
 		// the camera position and the viewport and also the speed.
 
 		rect.x = (int)((-it->data->GetPos().x + it->data->GetViewport().x) * speed) + x * app->win->scale;
@@ -223,7 +200,7 @@ bool Render::DrawTexture(SDL_Texture* texture, int x, int y, const SDL_Rect* sec
 			SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
 		}
 
-		// TODO 6: Check if the rect is inside of the viewport or not. If not, you don't want to draw it
+		// Check if the rect is inside of the viewport or not. If not, you don't want to draw it
 
 		if (rect.x + rect.w > cam.x && rect.x < cam.x + cam.w &&
 			rect.y + rect.h > cam.y && rect.y < cam.y + cam.h)
@@ -368,45 +345,3 @@ bool Render::DrawCircle(int x, int y, int radius, Uint8 r, Uint8 g, Uint8 b, Uin
 	}
 	return ret;
 }
-
-bool Render::DrawText(const char* text, int posx, int posy,int w,int h, SDL_Color color) {
-
-	for (ListItem<Camera*>* it = cameras.start; it != nullptr; it = it->next)
-	{
-		SDL_Surface* surface = TTF_RenderText_Solid(font, text, color);
-		SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
-
-		int texW = 0;
-		int texH = 0;
-		SDL_QueryTexture(texture, NULL, NULL, &texW, &texH);
-		SDL_Rect dstrect = { posx, posy, w, h };
-
-		SDL_RenderCopy(renderer, texture, NULL, &dstrect);
-
-		SDL_DestroyTexture(texture);
-		SDL_FreeSurface(surface);
-	}
-	return true;
-}
-
-//// L03: DONE 6: Implement a method to load the state
-//// for now load camera's x and y
-//bool Render::LoadState(pugi::xml_node& data)
-//{
-//	camera.x = data.child("camera").attribute("x").as_int();
-//	camera.y = data.child("camera").attribute("y").as_int();
-//
-//	return true;
-//}
-//
-//// L03: DONE 8: Create a method to save the state of the renderer
-//// using append_child and append_attribute
-//bool Render::SaveState(pugi::xml_node& data)
-//{
-//	pugi::xml_node cam = data.append_child("camera");
-//
-//	cam.append_attribute("x") = camera.x;
-//	cam.append_attribute("y") = camera.y;
-//
-//	return true;
-//}
