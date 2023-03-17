@@ -8,7 +8,7 @@ class Camera
 public:
 
 	// Constructor
-	Camera(iPoint b, SDL_Rect view) : pos(b), viewport(view) {}
+	Camera(SDL_Rect view) : viewport(view) {}
 
 	// Destructor
 	virtual ~Camera() {}

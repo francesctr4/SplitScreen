@@ -19,15 +19,15 @@ Player::~Player() {
 
 bool Player::Awake() {
 
-	//L02: DONE 1: Initialize Player parameters
-
-	//L02: DONE 5: Get Player parameters from XML
+	// Initialize Player parameters from XML
 	position.x = parameters.attribute("x").as_int();
 	position.y = parameters.attribute("y").as_int();
 	texturePath = parameters.attribute("texturepath").as_string();
 
+	// Split Screen: initialize players identification from XML
 	id = parameters.attribute("id").as_int();
 
+	// Split Screen: initialize players input keys from XML
 	if (SString(parameters.attribute("keys").as_string()) == SString("wasd")) keys = InputKeys::WASD;
 	if (SString(parameters.attribute("keys").as_string()) == SString("tfgh")) keys = InputKeys::TFGH;
 	if (SString(parameters.attribute("keys").as_string()) == SString("ijkl")) keys = InputKeys::IJKL;
@@ -38,20 +38,17 @@ bool Player::Awake() {
 
 bool Player::Start() {
 
-	//initilize textures
+	//initilize textures.
 	texture = app->tex->Load(texturePath);
 
-	// L07 DONE 5: Add physics to the player - initialize physics body
+	// Add physics to the player.
 	pbody = app->physics->CreateCircle(position.x+16, position.y+16, 16, bodyType::KINEMATIC);
 
-	// L07 DONE 6: Assign player class (using "this") to the listener of the pbody. This makes the Physics module to call the OnCollision method
+	// Assign player class (using "this") to the listener of the pbody. This makes the Physics module to call the OnCollision method.
 	pbody->listener = this; 
 
-	// L07 DONE 7: Assign collider type
+	// Assign collider type.
 	pbody->ctype = ColliderType::PLAYER;
-
-	//initialize audio effect - !! Path is hardcoded, should be loaded from config.xml
-	pickCoinFxId = app->audio->LoadFx("Assets/Audio/Fx/retro-video-game-coin-pickup-38299.ogg");
 
 	return true;
 }
@@ -59,22 +56,22 @@ bool Player::Start() {
 bool Player::Update()
 {
 
-	// L07 DONE 5: Add physics to the player - updated player position using physics
+	// Add physics to the player and update player position using physics.
 
 	int speed = 5; 
 	b2Vec2 vel = b2Vec2(0, -GRAVITY_Y); 
 
-	//L02: DONE 4: modify the position of the player using arrow keys and render the texture
-
+	// Split Screen: manage players movement according to input keys and speed used.
 	HandleInput(keys, vel, speed);
 
-	//Set the velocity of the pbody of the player
+	// Set the velocity of the pbody of the player.
 	pbody->body->SetLinearVelocity(vel);
 
-	//Update player position in pixels
+	// Update player position in pixels.
 	position.x = METERS_TO_PIXELS(pbody->body->GetTransform().p.x) - 16;
 	position.y = METERS_TO_PIXELS(pbody->body->GetTransform().p.y) - 16;
 
+	// Draw player texture.
 	app->render->DrawTexture(texture, position.x , position.y);
 
 	return true;
@@ -85,16 +82,15 @@ bool Player::CleanUp()
 	return true;
 }
 
-// L07 DONE 6: Define OnCollision function for the player. Check the virtual function on Entity class
+// Define OnCollision function for the player. Check the virtual function on Entity class.
 void Player::OnCollision(PhysBody* physA, PhysBody* physB) {
 
-	// L07 DONE 7: Detect the type of collision
+	// Detect the type of collision.
 
 	switch (physB->ctype)
 	{
 		case ColliderType::ITEM:
 			LOG("Collision ITEM");
-			app->audio->PlayFx(pickCoinFxId);
 			break;
 		case ColliderType::PLATFORM:
 			LOG("Collision PLATFORM");
@@ -106,10 +102,10 @@ void Player::OnCollision(PhysBody* physA, PhysBody* physB) {
 
 }
 
-// Split Screen
+// Split Screen: manage players movement according to input keys and speed used.
 void Player::HandleInput(InputKeys keys, b2Vec2& vel, int speed) {
 
-	if (id <= app->render->cameras.Count()) {
+	if (id <= app->render->cameras.Count()) { // For N cameras available, allows movement to N players.
 
 		if (keys == InputKeys::WASD) {
 

@@ -6,7 +6,7 @@
 #include "Physics.h"
 #include "SDL/include/SDL.h"
 
-// Split Screen
+// Split Screen: enum class to manage players input keys
 enum class InputKeys {
 
 	WASD,
@@ -34,28 +34,21 @@ public:
 
 	bool CleanUp();
 
-	// L07 DONE 6: Define OnCollision function for the player. Check the virtual function on Entity class
 	void OnCollision(PhysBody* physA, PhysBody* physB);
 
-	// Split Screen
+	// Split Screen: manage players movement
 	void HandleInput(InputKeys keys, b2Vec2& vel, int speed);
-
-
-public:
-
 
 private:
 
-	//L02: DONE 1: Declare player parameters
+	// Declare player parameters
 	SDL_Texture* texture;
 	const char* texturePath;
 
-	// L07 DONE 5: Add physics to the player - declare a Physics body
+	// Add physics to the player 
 	PhysBody* pbody;
 
-	int pickCoinFxId;
-
-	// Split Screen
+	// Split Screen: attributes to distinguish between players
 	int id;
 	InputKeys keys;
 

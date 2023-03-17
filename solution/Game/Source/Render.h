@@ -14,47 +14,50 @@ class Render : public Module
 public:
 
 	Render();
-
-	// Destructor
+	
+	// Destructor.
 	virtual ~Render();
 
-	// Called before render is available
+	// Called before render is available.
 	bool Awake(pugi::xml_node&);
 
-	// Called before the first frame
+	// Called before the first frame.
 	bool Start();
 
-	// Called each loop iteration
+	// Called each loop iteration.
 	bool PreUpdate();
 	bool Update(float dt);
 	bool PostUpdate();
 
-	// Called before quitting
+	// Called before quitting.
 	bool CleanUp();
 
+	// Split Screen: manage camera viewports.
 	void SetViewPort(const SDL_Rect& rect);
 	void ResetViewPort();
 
-	// Drawing
+	// Split Screen: Drawing to screen, but with some modifications to handle several screens.
 	bool DrawTexture(SDL_Texture* texture, int x, int y, const SDL_Rect* section = NULL, float speed = 1.0f, double angle = 0, int pivotX = INT_MAX, int pivotY = INT_MAX) const;
 	bool DrawRectangle(const SDL_Rect& rect, Uint8 r, Uint8 g, Uint8 b, Uint8 a = 255, bool filled = true, bool useCamera = true) const;
-	bool DrawLine(int x1, int y1, int x2, int y2, Uint8 r, Uint8 g, Uint8 b, Uint8 a = 255, bool useCamera = true) const;
-	bool DrawCircle(int x1, int y1, int redius, Uint8 r, Uint8 g, Uint8 b, Uint8 a = 255, bool useCamera = true) const;
 
-	// Set background color
+	// Set background color.
 	void SetBackgroundColor(SDL_Color color);
 
-	// Split Screen
-	void AddCamera(iPoint bounds, SDL_Rect viewport);
+	// Split Screen: function to create a camera according to a viewport.
+	void AddCamera(SDL_Rect viewport);
+
+	// Split Screen: function to empty the cameras list.
 	void ClearCameras();
+
+	// Split Screen: function to center an active camera to a player.
 	void CenterCamera(ListItem<Camera*>* item, int player);
 
 public:
 
 	SDL_Renderer* renderer;
-	SDL_Rect viewport;
 	SDL_Color background;
 
+	// Split Screen: list of active cameras.
 	List<Camera*> cameras;
 
 };

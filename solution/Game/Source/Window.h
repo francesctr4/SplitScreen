@@ -10,6 +10,7 @@ class Window : public Module
 {
 public:
 
+	// Constructor
 	Window();
 
 	// Destructor
@@ -38,6 +39,8 @@ public:
 	SDL_Surface* screenSurface;
 
 public:
+
+	// Window Attributes
 	SString title;
 	uint width;
 	uint height;

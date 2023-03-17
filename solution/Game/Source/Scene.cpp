@@ -26,8 +26,7 @@ bool Scene::Awake(pugi::xml_node& config)
 	LOG("Loading Scene");
 	bool ret = true;
 
-	//L02: DONE 3: Instantiate the player using the entity manager
-
+	// Split Screen: instantiate the players using the entity manager.
 	for (pugi::xml_node playerNode = config.child("player"); playerNode; playerNode = playerNode.next_sibling("player"))
 	{
 		Player* player = (Player*)app->entityManager->CreateEntity(EntityType::PLAYER);
@@ -43,11 +42,11 @@ bool Scene::Awake(pugi::xml_node& config)
 // Called before the first frame
 bool Scene::Start()
 {
-	// Split Screen
+	// Split Screen: create the necessary cameras to show the chosen DisplayType.
 	// Change the DisplayType to control how many screens will be loaded.
-	CreateCameras(DisplayType::FOUR_SCREENS, app->render);
+	CreateCameras(DisplayType::FOUR_SCREENS);
 	
-	// L03: DONE: Load map
+	// Load map
 	bool retLoad = app->map->Load();
 
 	return true;
@@ -87,61 +86,61 @@ bool Scene::CleanUp()
 	return true;
 }
 
-// Split Screen
-void Scene::CreateCameras(DisplayType display, Render* render)
+// Split Screen: function to create the necessary cameras to display the chosen DisplayType (Hardcoded).
+void Scene::CreateCameras(DisplayType display)
 {
 	switch (display)
 	{
 	case DisplayType::ONE_SCREEN:
 
-		render->AddCamera({ 0, 0 }, { 0, 0, 1280, 720 });
+		app->render->AddCamera({ 0, 0, 1280, 720 });
 
 		break;
 
 	case DisplayType::TWO_HORIZONTAL:
 
-		render->AddCamera({ 0, 0 }, { 2, 2, 1276, 357 });
-		render->AddCamera({ 0, 0 }, { 2, 361, 1276, 357 });
+		app->render->AddCamera({ 2, 2, 1276, 357 });
+		app->render->AddCamera({ 2, 361, 1276, 357 });
 
 		break;
 
 	case DisplayType::TWO_VERTICAL:
 
-		render->AddCamera({ 0, 0 }, { 2, 2, 637, 716 });
-		render->AddCamera({ 0, 0 }, { 641, 2, 637, 716 });
+		app->render->AddCamera({ 2, 2, 637, 716 });
+		app->render->AddCamera({ 641, 2, 637, 716 });
 
 		break;
 
 	case DisplayType::THREE_LEFT:
 
-		render->AddCamera({ 0, 0 }, { 2, 2, 637, 357 });
-		render->AddCamera({ 0, 0 }, { 641, 2, 637, 357 });
-		render->AddCamera({ 0, 0 }, { 2, 361, 637, 357 });
+		app->render->AddCamera({ 2, 2, 637, 357 });
+		app->render->AddCamera({ 641, 2, 637, 357 });
+		app->render->AddCamera({ 2, 361, 637, 357 });
 
 		break;
 
 	case DisplayType::THREE_CENTERED:
 
-		render->AddCamera({ 0, 0 }, { 2, 2, 637, 357 });
-		render->AddCamera({ 0, 0 }, { 641, 2, 637, 357 });
-		render->AddCamera({ 0, 0 }, { 321, 361, 637, 357 });
+		app->render->AddCamera({ 2, 2, 637, 357 });
+		app->render->AddCamera({ 641, 2, 637, 357 });
+		app->render->AddCamera({ 321, 361, 637, 357 });
 
 		break;
 
 	case DisplayType::THREE_RIGHT:
 
-		render->AddCamera({ 0, 0 }, { 2, 2, 637, 357 });
-		render->AddCamera({ 0, 0 }, { 641, 2, 637, 357 });
-		render->AddCamera({ 0, 0 }, { 641, 361, 637, 357 });
+		app->render->AddCamera({ 2, 2, 637, 357 });
+		app->render->AddCamera({ 641, 2, 637, 357 });
+		app->render->AddCamera({ 641, 361, 637, 357 });
 
 		break;
 
 	case DisplayType::FOUR_SCREENS:
 
-		render->AddCamera({ 0, 0 }, { 2, 2, 637, 357 });
-		render->AddCamera({ 0, 0 }, { 641, 2, 637, 357 });
-		render->AddCamera({ 0, 0 }, { 2, 361, 637, 357 });
-		render->AddCamera({ 0, 0 }, { 641, 361, 637, 357 });
+		app->render->AddCamera({ 2, 2, 637, 357 });
+		app->render->AddCamera({ 641, 2, 637, 357 });
+		app->render->AddCamera({ 2, 361, 637, 357 });
+		app->render->AddCamera({ 641, 361, 637, 357 });
 
 		break;
 

@@ -36,6 +36,7 @@ bool Render::Awake(pugi::xml_node& config)
 		LOG("Using vsync");
 	}
 
+	// Create Renderer.
 	renderer = SDL_CreateRenderer(app->win->window, -1, flags);
 
 	if(renderer == NULL)
@@ -44,7 +45,7 @@ bool Render::Awake(pugi::xml_node& config)
 		ret = false;
 	}
 
-	//initialise the SDL_ttf library
+	// Initialize the SDL_ttf library.
 	TTF_Init();
 
 	return ret;
@@ -54,11 +55,9 @@ bool Render::Awake(pugi::xml_node& config)
 bool Render::Start()
 {
 	LOG("render start");
-	// back background
-	//SDL_RenderGetViewport(renderer, &viewport);
 
-	ListItem<Camera*>* item = cameras.start;
-	for (; item != nullptr; item = item->next)
+	// Split Screen: get the drawing area (viewport) of each of the active cameras.
+	for (ListItem<Camera*>* item = cameras.start; item != nullptr; item = item->next) 
 	{
 		SDL_RenderGetViewport(renderer, &item->data->GetViewport());
 	}
@@ -75,15 +74,11 @@ bool Render::PreUpdate()
 
 bool Render::Update(float dt)
 {
-	float speed = 0.2 * dt;
-
-	ListItem<Camera*>* item = app->render->cameras.start;
-
+	// Split Screen: center each active camera to the corresponding player.
+	ListItem<Camera*>* item = cameras.start;
 	for (int i = 0; item != nullptr; item = item->next, i++)
 	{
-
 		CenterCamera(item, i);
-
 	}
 
 	return true;
@@ -99,9 +94,10 @@ bool Render::PostUpdate()
 // Called before quitting
 bool Render::CleanUp()
 {
+	// Split Screen: clear the cameras list.
 	cameras.Clear();
 
-	//we clean up TTF library
+	// Clean up TTF library.
 	TTF_Quit();
 
 
@@ -115,44 +111,48 @@ void Render::SetBackgroundColor(SDL_Color color)
 	background = color;
 }
 
+// Split Screen: set the viewport for each of the active cameras.
 void Render::SetViewPort(const SDL_Rect& rect)
 {
-	ListItem<Camera*>* item = cameras.start;
-	for (; item != cameras.end; item = item->next)
+	for (ListItem<Camera*>* item = cameras.start; item != cameras.end; item = item->next)
 	{
 		SDL_RenderSetViewport(renderer, &item->data->GetViewport());
 	}
-
 }
 
+// Split Screen: reset the viewport for each of the active cameras.
 void Render::ResetViewPort()
 {
-	ListItem<Camera*>* item = cameras.start;
-	for (; item != cameras.end; item = item->next)
+	for (ListItem<Camera*>* item = cameras.start; item != cameras.end; item = item->next)
 	{
 		SDL_RenderSetViewport(renderer, &item->data->GetViewport());
 	}
-
 }
 
-void Render::AddCamera(iPoint bounds, SDL_Rect viewport)
+// Split Screen: function to create a camera according to a viewport.
+void Render::AddCamera(SDL_Rect viewport)
 {
-	Camera* camera = new Camera(bounds, viewport);
+	Camera* camera = new Camera(viewport);
 
 	cameras.Add(camera);
 }
 
+// Split Screen: function to empty the cameras list.
 void Render::ClearCameras()
 {
 	cameras.Clear();
 }
 
+// Split Screen: function to center an active camera to a player.
 void Render::CenterCamera(ListItem<Camera*>* item, int player) {
 
-	// Center Camera
+	// First we center the camera to the player.
 
-	int midPlayerPosX = (32 / 2) + app->scene->players[player]->position.x;
-	int midPlayerPosY = (32 / 2) + app->scene->players[player]->position.y;
+	int playerWidth = 32;
+	int playerHeight = 32;
+
+	int midPlayerPosX = (playerWidth / 2) + app->scene->players[player]->position.x;
+	int midPlayerPosY = (playerHeight / 2) + app->scene->players[player]->position.y;
 
 	int camX = -item->data->pos.x + item->data->viewport.x;
 	int camY = -item->data->pos.y + item->data->viewport.y;
@@ -167,29 +167,35 @@ void Render::CenterCamera(ListItem<Camera*>* item, int player) {
 		item->data->pos.y = (midPlayerPosY - (item->data->viewport.h / 2));
 	}
 
-	// Camera limits
+	// Then we establish the camera limits.
+
+	int mapWidth = 2048;
+	int mapHeight = 768;
 
 	if (item->data->pos.x <= 0) item->data->pos.x = 0;
 	if (item->data->pos.y <= 0) item->data->pos.y = 0;
-	if (item->data->pos.x + item->data->viewport.w >= 2048) item->data->pos.x = 2048 - item->data->viewport.w;
-	if (item->data->pos.y + item->data->viewport.h >= 768) item->data->pos.y = 768 - item->data->viewport.h;
+	if (item->data->pos.x + item->data->viewport.w >= mapWidth) item->data->pos.x = mapWidth - item->data->viewport.w;
+	if (item->data->pos.y + item->data->viewport.h >= mapHeight) item->data->pos.y = mapHeight - item->data->viewport.h;
 
 }
 
-// Blit to screen
+// Split Screen: Blit Textures to Screen
 bool Render::DrawTexture(SDL_Texture* texture, int x, int y, const SDL_Rect* section, float speed, double angle, int pivotX, int pivotY) const
 {
 	bool ret = true;
-	SDL_Rect rect = { 0,0,0,0 };
-	ListItem<Camera*>* it = cameras.start;
-	for (; it != nullptr; it = it->next)
-	{
-		// Here you have the x and y that you receive in the function. You also have to use
-		// the camera position and the viewport and also the speed.
 
-		rect.x = (int)((-it->data->GetPos().x + it->data->GetViewport().x) * speed) + x * app->win->scale;
-		rect.y = (int)((-it->data->GetPos().y + it->data->GetViewport().y) * speed) + y * app->win->scale;
-		SDL_Rect cam = it->data->GetViewport();
+	SDL_Rect rect = { 0,0,0,0 };
+
+	for (ListItem<Camera*>* item = cameras.start; item != nullptr; item = item->next)
+	{
+		// First you have to get the rectangle with the corresponding texture, 
+		// taking into account the attributes of the camera.
+
+		rect.x = (int)((-item->data->GetPos().x + item->data->GetViewport().x) * speed) + x * app->win->scale;
+		rect.y = (int)((-item->data->GetPos().y + item->data->GetViewport().y) * speed) + y * app->win->scale;
+
+		SDL_Rect cam = item->data->GetViewport();
+
 		if (section != NULL)
 		{
 			rect.w = section->w;
@@ -200,7 +206,7 @@ bool Render::DrawTexture(SDL_Texture* texture, int x, int y, const SDL_Rect* sec
 			SDL_QueryTexture(texture, NULL, NULL, &rect.w, &rect.h);
 		}
 
-		// Check if the rect is inside of the viewport or not. If not, you don't want to draw it
+		// Then, you must check if the texture is inside of the viewport or not. If not, don't draw it.
 
 		if (rect.x + rect.w > cam.x && rect.x < cam.x + cam.w &&
 			rect.y + rect.h > cam.y && rect.y < cam.y + cam.h)
@@ -237,6 +243,7 @@ bool Render::DrawTexture(SDL_Texture* texture, int x, int y, const SDL_Rect* sec
 	return ret;
 }
 
+// Split Screen: Blit Rectangles to Screen
 bool Render::DrawRectangle(const SDL_Rect& rect, Uint8 r, Uint8 g, Uint8 b, Uint8 a, bool filled, bool use_camera) const
 {
 	bool ret = true;
@@ -244,11 +251,13 @@ bool Render::DrawRectangle(const SDL_Rect& rect, Uint8 r, Uint8 g, Uint8 b, Uint
 	for (ListItem<Camera*>* it = cameras.start; it != nullptr; it = it->next)
 	{
 		SDL_Rect cam = it->data->GetViewport();
+
 		SDL_Rect rec(rect);
+
 		if (use_camera)
 		{
-			// TODO 5: Here you have the x and y from the rect that you receive in the function. You also have to use
-			// the camera position and the viewport and also the speed.
+			// First you have to get the rectangle with the corresponding texture, 
+			// taking into account the attributes of the camera.
 
 			rec.x = (int)((rect.x + (it->data->GetViewport().x - it->data->GetPos().x)) * app->win->scale);
 			rec.y = (int)((rect.y + (it->data->GetViewport().y - it->data->GetPos().y)) * app->win->scale);
@@ -256,7 +265,7 @@ bool Render::DrawRectangle(const SDL_Rect& rect, Uint8 r, Uint8 g, Uint8 b, Uint
 			rec.h *= app->win->scale;
 		}
 
-		// TODO 6: Check if the rect is inside of the viewport or not. If not, you don't want to draw it
+		// Then, you must check if the texture is inside of the viewport or not. If not, don't draw it.
 
 		if (rec.x + rec.w > cam.x && rec.x < cam.x + cam.w &&
 			rec.y + rec.h > cam.y && rec.y < cam.y + cam.h)
@@ -283,65 +292,5 @@ bool Render::DrawRectangle(const SDL_Rect& rect, Uint8 r, Uint8 g, Uint8 b, Uint
 		}
 	}
 
-	return ret;
-}
-
-bool Render::DrawLine(int x1, int y1, int x2, int y2, Uint8 r, Uint8 g, Uint8 b, Uint8 a, bool use_camera) const
-{
-	bool ret = true;
-
-	for (ListItem<Camera*>* it = cameras.start; it != nullptr; it = it->next)
-	{
-		uint scale = app->win->GetScale();
-
-		SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
-		SDL_SetRenderDrawColor(renderer, r, g, b, a);
-
-		int result = -1;
-
-		if (use_camera)
-			result = SDL_RenderDrawLine(renderer, it->data->GetPos().x + x1 * scale, it->data->GetPos().y + y1 * scale, it->data->GetPos().x + x2 * scale, it->data->GetPos().y + y2 * scale);
-		else
-			result = SDL_RenderDrawLine(renderer, x1 * scale, y1 * scale, x2 * scale, y2 * scale);
-
-		if (result != 0)
-		{
-			LOG("Cannot draw quad to screen. SDL_RenderFillRect error: %s", SDL_GetError());
-			ret = false;
-		}
-
-	}
-	return ret;
-}
-
-bool Render::DrawCircle(int x, int y, int radius, Uint8 r, Uint8 g, Uint8 b, Uint8 a, bool use_camera) const
-{
-	bool ret = true;
-	for (ListItem<Camera*>* it = cameras.start; it != nullptr; it = it->next)
-	{
-		uint scale = app->win->GetScale();
-
-		SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
-		SDL_SetRenderDrawColor(renderer, r, g, b, a);
-
-		int result = -1;
-		SDL_Point points[360];
-
-		float factor = (float)M_PI / 180.0f;
-
-		for (uint i = 0; i < 360; ++i)
-		{
-			points[i].x = (int)(it->data->GetPos().x + x + radius * cos(i * factor));
-			points[i].y = (int)(it->data->GetPos().y + y + radius * sin(i * factor));
-		}
-
-		result = SDL_RenderDrawPoints(renderer, points, 360);
-
-		if (result != 0)
-		{
-			LOG("Cannot draw quad to screen. SDL_RenderFillRect error: %s", SDL_GetError());
-			ret = false;
-		}
-	}
 	return ret;
 }

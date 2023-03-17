@@ -258,7 +258,7 @@ bool Physics::PostUpdate()
 					{
 						v = b->GetWorldPoint(polygonShape->GetVertex(i));
 						if (i > 0)
-							app->render->DrawLine(METERS_TO_PIXELS(prev.x), METERS_TO_PIXELS(prev.y), METERS_TO_PIXELS(v.x), METERS_TO_PIXELS(v.y), 255, 255, 100);
+							//app->render->DrawLine(METERS_TO_PIXELS(prev.x), METERS_TO_PIXELS(prev.y), METERS_TO_PIXELS(v.x), METERS_TO_PIXELS(v.y), 255, 255, 100);
 
 						prev = v;
 					}
@@ -278,7 +278,7 @@ bool Physics::PostUpdate()
 					{
 						v = b->GetWorldPoint(shape->m_vertices[i]);
 						if (i > 0)
-							app->render->DrawLine(METERS_TO_PIXELS(prev.x), METERS_TO_PIXELS(prev.y), METERS_TO_PIXELS(v.x), METERS_TO_PIXELS(v.y), 100, 255, 100);
+							//app->render->DrawLine(METERS_TO_PIXELS(prev.x), METERS_TO_PIXELS(prev.y), METERS_TO_PIXELS(v.x), METERS_TO_PIXELS(v.y), 100, 255, 100);
 						prev = v;
 					}
 

@@ -6,10 +6,9 @@
 
 struct SDL_Texture;
 
-// Split Screen
+// Split Screen: enum class with all the display types available in this implementation.
 enum class DisplayType
 {
-
 	ONE_SCREEN,
 	TWO_HORIZONTAL,
 	TWO_VERTICAL,
@@ -17,7 +16,6 @@ enum class DisplayType
 	THREE_CENTERED,
 	THREE_RIGHT,
 	FOUR_SCREENS
-
 };
 
 class Scene : public Module
@@ -47,12 +45,12 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	// Split Screen
-	void CreateCameras(DisplayType display, Render* render);
+	// Split Screen: function to create the necessary cameras to display the chosen DisplayType.
+	void CreateCameras(DisplayType display);
 
 public:
 
-	// Split Screen
+	// Split Screen: list of players initialized with the entity manager.
 	List<Player*> players;
 
 };
