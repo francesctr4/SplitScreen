@@ -24,10 +24,10 @@ bool Player::Awake() {
 	position.y = parameters.attribute("y").as_int();
 	texturePath = parameters.attribute("texturepath").as_string();
 
-	// Split Screen: initialize players identification from XML
+	// TODO 2 - Split Screen: initialize players identification from XML
 	id = parameters.attribute("id").as_int();
 
-	// Split Screen: initialize players input keys from XML
+	// TODO 2 - Split Screen: initialize players input keys from XML
 	if (SString(parameters.attribute("keys").as_string()) == SString("wasd")) keys = InputKeys::WASD;
 	if (SString(parameters.attribute("keys").as_string()) == SString("tfgh")) keys = InputKeys::TFGH;
 	if (SString(parameters.attribute("keys").as_string()) == SString("ijkl")) keys = InputKeys::IJKL;
@@ -61,7 +61,7 @@ bool Player::Update()
 	int speed = 5; 
 	b2Vec2 vel = b2Vec2(0, -GRAVITY_Y); 
 
-	// Split Screen: manage players movement according to input keys and speed used.
+	// TODO 2 - Split Screen: manage players movement according to active cameras, input keys and speed used.
 	HandleInput(keys, vel, speed);
 
 	// Set the velocity of the pbody of the player.

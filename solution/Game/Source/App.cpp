@@ -15,7 +15,7 @@
 #include <iostream>
 #include <sstream>
 
-// L16: TODO 3: Add OPTICK_EVENT() calls to all Update methods
+// Add OPTICK_EVENT() calls to all Update methods
 // Alternatively you can use OPTICK_CATEGORY()
 // Constructor
 App::App(int argc, char* args[]) : argc(argc), args(args)
@@ -338,7 +338,7 @@ const char* App::GetOrganization() const
 }
 
 // L02: DONE 1: Implement methods to request load / save and methods 
-// for the real execution of load / save (to be implemented in TODO 5 and 7)
+
 void App::LoadGameRequest()
 {
 	// NOTE: We should check if SAVE_STATE_FILENAME actually exist

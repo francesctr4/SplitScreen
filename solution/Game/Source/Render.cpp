@@ -56,7 +56,7 @@ bool Render::Start()
 {
 	LOG("render start");
 
-	// Split Screen: get the drawing area (viewport) of each of the active cameras.
+	// TODO 4 - Split Screen: get the drawing area (viewport) of each of the active cameras.
 	for (ListItem<Camera*>* item = cameras.start; item != nullptr; item = item->next) 
 	{
 		SDL_RenderGetViewport(renderer, &item->data->GetViewport());
@@ -74,7 +74,7 @@ bool Render::PreUpdate()
 
 bool Render::Update(float dt)
 {
-	// Split Screen: center each active camera to the corresponding player.
+	// TODO 5 - Split Screen: center each active camera to the corresponding player.
 	ListItem<Camera*>* item = cameras.start;
 	for (int i = 0; item != nullptr; item = item->next, i++)
 	{
@@ -95,7 +95,7 @@ bool Render::PostUpdate()
 bool Render::CleanUp()
 {
 	// Split Screen: clear the cameras list.
-	cameras.Clear();
+	ClearCameras();
 
 	// Clean up TTF library.
 	TTF_Quit();
@@ -129,7 +129,7 @@ void Render::ResetViewPort()
 	}
 }
 
-// Split Screen: function to create a camera according to a viewport.
+// TODO 1 - Split Screen: write a function to create a camera according to a given viewport and add it to the cameras list.
 void Render::AddCamera(SDL_Rect viewport)
 {
 	Camera* camera = new Camera(viewport);
@@ -137,7 +137,7 @@ void Render::AddCamera(SDL_Rect viewport)
 	cameras.Add(camera);
 }
 
-// Split Screen: function to empty the cameras list.
+// TODO 1 - Split Screen: write a function to empty the cameras list.
 void Render::ClearCameras()
 {
 	cameras.Clear();

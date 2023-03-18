@@ -26,7 +26,7 @@ bool Scene::Awake(pugi::xml_node& config)
 	LOG("Loading Scene");
 	bool ret = true;
 
-	// Split Screen: instantiate the players using the entity manager.
+	// TODO 3 - Split Screen: instantiate the players using the entity manager and add them to the players list.
 	for (pugi::xml_node playerNode = config.child("player"); playerNode; playerNode = playerNode.next_sibling("player"))
 	{
 		Player* player = (Player*)app->entityManager->CreateEntity(EntityType::PLAYER);
@@ -42,7 +42,7 @@ bool Scene::Awake(pugi::xml_node& config)
 // Called before the first frame
 bool Scene::Start()
 {
-	// Split Screen: create the necessary cameras to show the chosen DisplayType.
+	// TODO 6 - Split Screen: create the necessary cameras to show the chosen DisplayType.
 	// Change the DisplayType to control how many screens will be loaded.
 	CreateCameras(DisplayType::FOUR_SCREENS);
 	
