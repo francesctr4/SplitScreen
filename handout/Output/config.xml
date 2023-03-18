@@ -1,0 +1,39 @@
+<config>
+  <app>
+    <title>Game Development Testbed</title>
+    <organization>UPC</organization>
+    <frcap value = "16"/>
+  </app>
+
+  <renderer>
+    <vsync value="false"/>
+  </renderer>
+
+  <window>
+    <resolution width="1280" height="720" scale="1"/>
+    <fullscreen value="false"/>
+    <borderless value="false"/>
+    <resizable value="false"/>
+    <fullscreen_window value="false"/>
+  </window>
+
+  <audio>
+    <music volume="128"/>
+    <fx volume="128"/>
+  </audio>
+
+  <scene>
+	  
+    <player x="60" y="365" texturepath="Assets/Textures/player1.png" keys = "wasd" id ="1"/>
+	<player x="160" y="365" texturepath="Assets/Textures/player2.png" keys = "tfgh" id ="2"/>
+	<player x="260" y="365" texturepath="Assets/Textures/player3.png" keys = "ijkl" id ="3"/>
+	<player x="360" y="365" texturepath="Assets/Textures/player4.png" keys = "arrows" id ="4"/>
+	  
+  </scene>
+
+  <map>
+    <mapfolder path="Assets/Maps/"/>
+    <mapfile path="Assets/Maps/MapTemplate.tmx"/>
+  </map>
+  
+</config>
