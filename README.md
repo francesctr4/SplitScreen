@@ -12,29 +12,29 @@
   
     W --> Move UP
     A --> Move LEFT
-        S --> Move DOWN
-	D --> Move RIGHT
+    S --> Move DOWN
+    D --> Move RIGHT
   
   ### PLAYER 2
   
-        T --> Move UP
-	F --> Move LEFT
-        G --> Move DOWN
-	H --> Move RIGHT
+    T --> Move UP
+    F --> Move LEFT
+    G --> Move DOWN
+    H --> Move RIGHT
   
   ### PLAYER 3
   
-        I --> Move UP
-	J --> Move LEFT
-        K --> Move DOWN
-	L --> Move RIGHT
+    I --> Move UP
+    J --> Move LEFT
+    K --> Move DOWN
+    L --> Move RIGHT
   
   ### PLAYER 4
   
-        Up --> Move UP
-	Left --> Move LEFT
-        Down --> Move DOWN
-        Right --> Move RIGHT
+    Up --> Move UP
+    Left --> Move LEFT
+    Down --> Move DOWN
+    Right --> Move RIGHT
 
 # About Me
 description
