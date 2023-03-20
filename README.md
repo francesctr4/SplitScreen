@@ -40,9 +40,9 @@
 
 ## Description
 
-## Github
-## LinkedIn
-## Sketchfab
+## [GitHub]()
+## [LinkedIn]()
+## [Sketchfab]()
 
 # Relevant Links
 
