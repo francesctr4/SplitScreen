@@ -1,5 +1,5 @@
 # Title
-## Personal Research
 # Description
+# Handout Controls
 # About Author
 # Relevant Links
