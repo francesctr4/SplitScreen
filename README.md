@@ -1,5 +1,4 @@
-# Personal Research: Split Screen | 
-# Francesc Teruel Rodriguez
+# Personal Research: Split Screen <br> Francesc Teruel Rodriguez
 # Description
 # Handout Controls
 # About Author
