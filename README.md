@@ -1,22 +1,40 @@
 # Personal Research: Split Screen <br> Francesc Teruel Rodriguez
 # Description
+
+
 # Handout Controls
 
 ## KEYBOARD ##
+
+        ESC --> Exit
 	
   ### PLAYER 1
   
-  A --> Move left
-	D --> Move right
-  SPACE --> Jump (do it again mid-air to double jump)
-	
-	ESC --> Opens the menu (In-Game) or Exits the game (At Title Screen)
+        W --> Move UP
+	A --> Move LEFT
+        S --> Move DOWN
+	D --> Move RIGHT
   
   ### PLAYER 2
   
+        T --> Move UP
+	F --> Move LEFT
+        G --> Move DOWN
+	H --> Move RIGHT
+  
   ### PLAYER 3
   
+        I --> Move UP
+	J --> Move LEFT
+        K --> Move DOWN
+	L --> Move RIGHT
+  
   ### PLAYER 4
+  
+        Up --> Move UP
+	Left --> Move LEFT
+        Down --> Move DOWN
+        Right --> Move RIGHT
 
 # About Me
 description
