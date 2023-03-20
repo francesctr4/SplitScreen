@@ -6,12 +6,12 @@
 
 ## KEYBOARD ##
 
-        ESC --> Exit
+    ESC --> Exit
 	
   ### PLAYER 1
   
-        W --> Move UP
-	A --> Move LEFT
+    W --> Move UP
+    A --> Move LEFT
         S --> Move DOWN
 	D --> Move RIGHT
   
