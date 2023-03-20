@@ -2,7 +2,9 @@
 
 ## Description
 
-ksxcsmkñcñlksñcm
+This project is part of the Project II subject, on the second year of the Videogame Design and Development degree, taught at CITM UPC (Terrassa) and supervised by pedro omedas.
+
+It consists of choosing a theme, developing it and presenting it, in my case this theme is the split screen.
 
 # Handout Controls
 
@@ -40,7 +42,11 @@ ksxcsmkñcñlksñcm
 
 # About Me
 
-dvskjvfsñnk
+I am a student of video game design and development, with a flair for learning new technologies.
+What I am best at is at anything related with code and programming, which is my preferred role at the projects done in university.
+I would also love to be able to do something related to 3D modelling.
+
+You can see my projects at:
 
 ### [GitHub](https://github.com/francesctr4)
 ### [LinkedIn](https://www.linkedin.com/in/francesc-teruel-rodr%C3%ADguez-916bab231/)
@@ -48,7 +54,7 @@ dvskjvfsñnk
 
 # Relevant Links
 
-Here you can find links to the same research made by other students at the CITM. Make sure to take a look to their approach too:
+Here you can find links to the same research made by other students at the CITM in previous years. Make sure to take a look at their approach too:
 
 ### [Split Screen (2021)](https://lucaspg14.github.io/Split-Screen/) by [Lucas Pérez](https://github.com/LucasPG14)
 
