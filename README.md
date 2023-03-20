@@ -38,11 +38,11 @@
 
 # About Me
 
-## Description
+dvskjvfsñnk
 
-## [GitHub]()
-## [LinkedIn]()
-## [Sketchfab]()
+### [GitHub](https://github.com/francesctr4)
+### [LinkedIn](https://www.linkedin.com/in/francesc-teruel-rodr%C3%ADguez-916bab231/)
+### [Sketchfab](https://sketchfab.com/francesctr4)
 
 # Relevant Links
 
