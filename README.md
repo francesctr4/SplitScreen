@@ -48,7 +48,7 @@ dvskjvfsñnk
 
 # Relevant Links
 
-Here you can find links to the same project but from previous years, made by other students at the CITM. Make sure to take a look to their approach too:
+Here you can find links to the same research made by other students at the CITM. Make sure to take a look to their approach too:
 
 ### [Split Screen (2021)](https://lucaspg14.github.io/Split-Screen/) by [Lucas Pérez](https://github.com/LucasPG14)
 
