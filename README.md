@@ -1,6 +1,7 @@
-# Personal Research: Split Screen <br> Francesc Teruel Rodriguez
-# Description
+# Personal Research: Split Screen <br> by Francesc Teruel Rodriguez
+## Description
 
+ksxcsmkñcñlksñcm
 
 # Handout Controls
 
