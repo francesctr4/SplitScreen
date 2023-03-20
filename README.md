@@ -2,7 +2,21 @@
 # Description
 # Handout Controls
 
-
+## KEYBOARD ##
+	
+  ### PLAYER 1
+  
+  A --> Move left
+	D --> Move right
+  SPACE --> Jump (do it again mid-air to double jump)
+	
+	ESC --> Opens the menu (In-Game) or Exits the game (At Title Screen)
+  
+  ### PLAYER 2
+  
+  ### PLAYER 3
+  
+  ### PLAYER 4
 
 # About Me
 description
