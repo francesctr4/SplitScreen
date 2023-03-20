@@ -45,7 +45,9 @@ All the information gathered can be found at the repository website and at the c
 # About Me
 
 I am a student of video game design and development, with a flair for learning new technologies.
+
 What I am best at is at anything related with code and programming, which is my preferred role at the projects done in university.
+
 I would also love to be able to do something related to 3D modelling.
 
 You can see my projects at:
