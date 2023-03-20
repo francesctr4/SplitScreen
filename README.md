@@ -37,10 +37,12 @@
     Right --> Move RIGHT
 
 # About Me
-description
-github
-linkedin
-sketchfab
+
+## Description
+
+## Github
+## LinkedIn
+## Sketchfab
 
 # Relevant Links
 
