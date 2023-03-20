@@ -6,6 +6,8 @@ This project is part of the Project II subject, on the second year of the Videog
 
 It consists of, once you have been given a topic to research, carrying out an investigation and presenting it to the rest of the class. In my case, the topic in question is **"Split Screen"**.
 
+All the information gathered can be found at the repository website and at the code provided.
+
 # Handout Controls
 
 ## KEYBOARD ##
