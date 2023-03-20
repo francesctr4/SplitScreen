@@ -2,9 +2,9 @@
 
 ## Description
 
-This project is part of the Project II subject, on the second year of the Videogame Design and Development degree, taught at CITM UPC (Terrassa) and supervised by pedro omedas.
+This project is part of the Project II subject, on the second year of the Videogame Design and Development degree, taught at CITM UPC (Terrassa) and supervised by [Pedro Omedas](https://github.com/pomedas).
 
-It consists of choosing a theme, developing it and presenting it, in my case this theme is the split screen.
+It consists of, once you have been given a topic to research, carrying out an investigation and presenting it to the rest of the class. In my case, the topic in question is **"Split Screen"**.
 
 # Handout Controls
 
