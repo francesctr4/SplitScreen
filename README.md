@@ -25,15 +25,12 @@ https://www.gamedeveloper.com/design/shared-multi-split-screen-design
 
 ## Videos
 
-https://youtu.be/sf4RgCDbM58 
-
-https://youtu.be/rw2VKAdTdgQ 
-
-https://youtu.be/ipU4MtV-O_8 
-
-https://youtu.be/68ViQFeE02o 
-
-https://youtu.be/1XdjHIshYY4 
+* [Rocket League - Splitscreen Multiplayer Gameplay Trailer](https://youtu.be/sf4RgCDbM58) 
+* []()
+* [How To Create A Split Screen In Unity](https://youtu.be/rw2VKAdTdgQ) 
+* [UE4 Split Screen](https://youtu.be/ipU4MtV-O_8) 
+* [UE4 - Tutorial - Local Splitscreen!](https://youtu.be/68ViQFeE02o) 
+* [How to Easily Add Split Screen Multiplayer in Godot](https://youtu.be/1XdjHIshYY4)
 
 ## Previous years approach
 
