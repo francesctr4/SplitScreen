@@ -13,15 +13,12 @@ Project II - Personal Research Assignment: Split Screen Implementation
 
 ## Articles
 
-https://www.ea.com/es-es/games/f1/f1-2021/game-overview 
-
-https://es.wikipedia.org/wiki/Pantalla_dividida 
-
-https://ultimatepopculture.fandom.com/wiki/Split_screen_(video_games) 
-
-https://philarchive.org/archive/KARSV 
-
-https://www.gamedeveloper.com/design/shared-multi-split-screen-design 
+* [Visión general de F1 2021](https://www.ea.com/es-es/games/f1/f1-2021/game-overview)
+* [Wikipedia - Pantalla dividida](https://es.wikipedia.org/wiki/Pantalla_dividida) 
+* [Ultimate Pop Culture Wiki - Split screen (video games)](https://ultimatepopculture.fandom.com/wiki/Split_screen_(video_games))
+* [Split-Screen: Videogame History through Local Multiplayer Design](https://philarchive.org/archive/KARSV)
+* [Game Developer - Shared-Multi-Split Screen Design](https://www.gamedeveloper.com/design/shared-multi-split-screen-design) 
+* [Voronoi split screen: A Quick Tour](https://mattwoelk.github.io/voronoi_split_screen_notes/)
 
 ## Videos
 
@@ -31,6 +28,7 @@ https://www.gamedeveloper.com/design/shared-multi-split-screen-design
 * [UE4 Split Screen](https://youtu.be/ipU4MtV-O_8) 
 * [UE4 - Tutorial - Local Splitscreen!](https://youtu.be/68ViQFeE02o) 
 * [How to Easily Add Split Screen Multiplayer in Godot](https://youtu.be/1XdjHIshYY4)
+* [Voronoi Split Screen System](https://youtu.be/vsRrB0ZggE4)
 
 ## Previous years approach
 
