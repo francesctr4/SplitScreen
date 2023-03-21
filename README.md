@@ -7,7 +7,7 @@ Project II - Personal Research Assignment: Split Screen Implementation
 # Possible Improvements/Innovations
 # Provided Code and/or Templates
 
-[Download](https://github.com/francesctr4/SplitScreen/archive/refs/heads/main.zip)
+### [Download Provided Code](https://github.com/francesctr4/SplitScreen/archive/refs/heads/main.zip)
 
 # Documentation Links and References
 
