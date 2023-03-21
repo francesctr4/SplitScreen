@@ -37,6 +37,5 @@ https://youtu.be/1XdjHIshYY4
 
 ## Previous years approach
 
-https://lucaspg14.github.io/Split-Screen/ 
-
-https://jorgegh2.github.io/Split-screen/ 
+### [Split Screen (2021)](https://lucaspg14.github.io/Split-Screen/) by [Lucas Pérez](https://github.com/LucasPG14)
+### [Split Screen (2019)](https://jorgegh2.github.io/Split-screen/) by [Jorge Gemas](https://github.com/jorgegh2)
