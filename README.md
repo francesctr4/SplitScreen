@@ -26,7 +26,7 @@ https://www.gamedeveloper.com/design/shared-multi-split-screen-design
 ## Videos
 
 * [Rocket League - Splitscreen Multiplayer Gameplay Trailer](https://youtu.be/sf4RgCDbM58) 
-* []()
+* [It Takes Two – Official Gameplay Trailer](https://youtu.be/GAWHzGNcTEw)
 * [How To Create A Split Screen In Unity](https://youtu.be/rw2VKAdTdgQ) 
 * [UE4 Split Screen](https://youtu.be/ipU4MtV-O_8) 
 * [UE4 - Tutorial - Local Splitscreen!](https://youtu.be/68ViQFeE02o) 
