@@ -2,17 +2,28 @@
 Project II - Personal Research Assignment: Split Screen Implementation
 
 # Problem Description
+
+
+
 # Market Study
+
+
+
 # Proposed Solution
+
+
+
 # Possible Improvements/Innovations
 
-# Provided Code and/or Templates
+
+
+# Provided Material
 
 All the material provided (handout, solution and presentation) can be downloaded by clicking this link:
 
-### [Download Provided Code](https://github.com/francesctr4/SplitScreen/archive/refs/heads/main.zip)
+### [Download Provided Material](https://github.com/francesctr4/SplitScreen/archive/refs/heads/main.zip)
 
-# Documentation Links and References
+# Documentation References
 
 This section gathers all the references used during the development of the research:
 
