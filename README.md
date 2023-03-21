@@ -5,11 +5,16 @@ Project II - Personal Research Assignment: Split Screen Implementation
 # Market Study
 # Proposed Solution
 # Possible Improvements/Innovations
+
 # Provided Code and/or Templates
+
+You can download the material provided
 
 ### [Download Provided Code](https://github.com/francesctr4/SplitScreen/archive/refs/heads/main.zip)
 
 # Documentation Links and References
+
+This section gathers all the references used during the development of the research:
 
 ## Articles
 
