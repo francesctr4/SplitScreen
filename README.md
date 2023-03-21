@@ -6,6 +6,9 @@ Project II - Personal Research Assignment: Split Screen Implementation
 # Proposed Solution
 # Possible Improvements/Innovations
 # Provided Code and/or Templates
+
+https://github.com/francesctr4/SplitScreen/archive/refs/heads/gh-pages.zip
+
 # Documentation Links and References
 
 https://www.ea.com/es-es/games/f1/f1-2021/game-overview 
