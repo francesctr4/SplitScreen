@@ -1,5 +1,4 @@
-# Personal-Research_Split-Screen
-Project II - Personal Research Assignment: Split Screen Implementation
+# Personal Research: Split Screen <br> by Francesc Teruel Rodríguez
 
 # Problem Description
 
