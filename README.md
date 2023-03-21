@@ -8,7 +8,7 @@ Project II - Personal Research Assignment: Split Screen Implementation
 
 # Provided Code and/or Templates
 
-You can download the material provided
+All the material provided (handout, solution and presentation) can be downloaded by clicking this link:
 
 ### [Download Provided Code](https://github.com/francesctr4/SplitScreen/archive/refs/heads/main.zip)
 
