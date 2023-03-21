@@ -1,6 +1,6 @@
 # Personal Research: Split Screen <br> by Francesc Teruel Rodríguez
 
-# Problem Description
+## Problem Description
 
 
 
