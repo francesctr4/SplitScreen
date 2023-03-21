@@ -7,7 +7,7 @@ Project II - Personal Research Assignment: Split Screen Implementation
 # Possible Improvements/Innovations
 # Provided Code and/or Templates
 
-https://github.com/francesctr4/SplitScreen/archive/refs/heads/gh-pages.zip
+[Download](https://github.com/francesctr4/SplitScreen/archive/refs/heads/gh-pages.zip)
 
 # Documentation Links and References
 
