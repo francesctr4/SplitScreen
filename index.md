@@ -55,6 +55,30 @@ All the material provided (handout, solution and presentation) can be downloaded
 ### TODO 6 → [Scene.cpp]
 ### “Create all the necessary cameras”
 
+## Results
+
+### One Screen
+![ONE_SCREEN](https://user-images.githubusercontent.com/99948892/227045336-ce753db3-f400-4d8f-849f-9633457ac9d4.png)
+
+### Two Screens (Vertical)
+![TWO_VERTICAL](https://user-images.githubusercontent.com/99948892/227045341-c1b03904-5ede-4d00-8ed5-b368c2c323d9.png)
+
+### Two Screens (Horizontal)
+![TWO_HORIZONTAL](https://user-images.githubusercontent.com/99948892/227045344-c21b2ccc-bf39-43e9-91e9-bf008cbc3204.png)
+
+### Three Screens (Align Left)
+![THREE_LEFT](https://user-images.githubusercontent.com/99948892/227045349-7625d11b-ce6a-4449-a9d0-61827eacf2c1.png)
+
+### Three Screens (Align Center)
+![THREE_CENTERED](https://user-images.githubusercontent.com/99948892/227045351-607e58de-3fc8-4a8a-b482-18539ba95bce.png)
+
+### Three Screens (Align Right)
+![THREE_RIGHT](https://user-images.githubusercontent.com/99948892/227045352-6396a525-127a-4e4e-9e16-8c1dc14d84b8.png)
+
+### Four Screens
+![FOUR_SCREENS](https://user-images.githubusercontent.com/99948892/227045355-35c6e569-ca34-409d-8882-1036e3aeef22.png)
+
+
 # Possible Improvements
 
 ## Problems of this implementation in SDL2
