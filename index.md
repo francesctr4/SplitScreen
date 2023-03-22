@@ -1,13 +1,13 @@
-# Split Screen Webpage
-
 # Introduction
 
-# When to use split screen?
+# Current State
 
-# Improvements for split screen
+# Selected Approach
 
-# How I implemented a split screen?
+# Split Screen Handout & Solution
 
-# Conclusion
+# Possible Improvements
+
+# Conclusions
 
 # References
