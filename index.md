@@ -17,7 +17,11 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbb
 ## Current techniques in the industry
 ## Split Screen in other game engines
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rw2VKAdTdgQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ipU4MtV-O_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1XdjHIshYY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Selected Approach
 
