@@ -40,20 +40,34 @@ All the material provided (handout, solution and presentation) can be downloaded
 ### TODO 1 → [Render.cpp]
 ### “Create cameras according to a viewport”
 
+![TODO 1](https://user-images.githubusercontent.com/99948892/227061306-41568d6d-1769-4885-9462-44ebd0c9ced8.png)
+
 ### TODO 2 → [Player.cpp]
 ### “Manage players movement and camera”
+
+![TODO 2.1](https://user-images.githubusercontent.com/99948892/227061545-10c1719e-4356-4efd-ac43-142c79e7657d.png)
+
+![TODO 2.2](https://user-images.githubusercontent.com/99948892/227061574-8d4a79ae-7d23-44aa-8753-0183929767e6.png)
 
 ### TODO 3 → [Scene.cpp]
 ### “Instantiate the players in the scene”
 
+![TODO 3](https://user-images.githubusercontent.com/99948892/227061519-a9e45b39-7443-492d-8a9e-3645a7def82a.png)
+
 ### TODO 4 → [Render.cpp]
 ### “Get the viewport of each active camera”
+
+![TODO 4](https://user-images.githubusercontent.com/99948892/227061466-5e230e87-7bd7-47ca-9a98-58328ba1c05a.png)
 
 ### TODO 5 → [Render.cpp]
 ### “Center each active camera to a player”
 
+![TODO 5](https://user-images.githubusercontent.com/99948892/227061423-3f448e8e-b911-4898-a4bc-5dc2899e688c.png)
+
 ### TODO 6 → [Scene.cpp]
 ### “Create all the necessary cameras”
+
+![TODO 6](https://user-images.githubusercontent.com/99948892/227061370-2e8c3613-9fbb-4680-ba4d-2297d2eadcc7.png)
 
 ## Results
 
