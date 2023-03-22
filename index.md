@@ -40,6 +40,10 @@ All the material provided (handout, solution and presentation) can be downloaded
 ### TODO 1 → [Render.cpp]
 ### “Create cameras according to a viewport”
 
+* First create a Camera* with the viewport defined.
+* Then add the camera to the cameras list.
+* Don’t forget to clear the cameras list.
+
 ![TODO 1](https://user-images.githubusercontent.com/99948892/227061306-41568d6d-1769-4885-9462-44ebd0c9ced8.png)
 
 ### TODO 2 → [Player.cpp]
