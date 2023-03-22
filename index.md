@@ -7,6 +7,10 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbb
 ## Context and History
 ## Current references
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sf4RgCDbM58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GAWHzGNcTEw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 # Current State
 
 ## Technical evolution of the Split Screen
