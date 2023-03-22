@@ -49,6 +49,9 @@ All the material provided (handout, solution and presentation) can be downloaded
 ### TODO 2 → [Player.cpp]
 ### “Manage players movement and camera”
 
+* Read the parameters from config.xml
+* Then use the function HandleInput to manage the camera-player-input relation
+
 ![TODO 2.1](https://user-images.githubusercontent.com/99948892/227061545-10c1719e-4356-4efd-ac43-142c79e7657d.png)
 
 ![TODO 2.2](https://user-images.githubusercontent.com/99948892/227061574-8d4a79ae-7d23-44aa-8753-0183929767e6.png)
@@ -56,20 +59,35 @@ All the material provided (handout, solution and presentation) can be downloaded
 ### TODO 3 → [Scene.cpp]
 ### “Instantiate the players in the scene”
 
+* Read the config.xml and retrieve all the player nodes.
+* Then you have to CreateEntity of each player.
+* Don’t forget to add them to the players list.
+
 ![TODO 3](https://user-images.githubusercontent.com/99948892/227061519-a9e45b39-7443-492d-8a9e-3645a7def82a.png)
 
 ### TODO 4 → [Render.cpp]
 ### “Get the viewport of each active camera”
+
+* You need a loop to go through the list of cameras
+* For each camera, state renderer and viewport
+* You can retrieve the viewport of the cameras
 
 ![TODO 4](https://user-images.githubusercontent.com/99948892/227061466-5e230e87-7bd7-47ca-9a98-58328ba1c05a.png)
 
 ### TODO 5 → [Render.cpp]
 ### “Center each active camera to a player”
 
+* Very similar loop to TODO 4
+* But now the loop has two iterators
+* You have to increment it after each iteration
+
 ![TODO 5](https://user-images.githubusercontent.com/99948892/227061423-3f448e8e-b911-4898-a4bc-5dc2899e688c.png)
 
 ### TODO 6 → [Scene.cpp]
 ### “Create all the necessary cameras”
+
+* Check the function CreateCameras
+* Check the enum class DisplayType
 
 ![TODO 6](https://user-images.githubusercontent.com/99948892/227061370-2e8c3613-9fbb-4680-ba4d-2297d2eadcc7.png)
 
