@@ -25,10 +25,10 @@ All the material provided (handout, solution and presentation) can be downloaded
 
 ## [Download Provided Material](https://github.com/francesctr4/SplitScreen/archive/refs/heads/main.zip)
 
-## TODO 1 → [Render.cpp] <br> 
+## TODO 1 → [Render.cpp]
 ##“Create cameras according to a viewport”
 
-## TODO 2 → [Player.cpp] <br> 
+## TODO 2 → [Player.cpp]
 ## “Manage players movement and camera”
 
 ## TODO 3 → [Scene.cpp] <br> 
