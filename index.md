@@ -1,9 +1,3 @@
-# Main Index
-
-* [Personal Research: Split Screen](https://francesctr4.github.io/SplitScreen/)
-  * [Introduction](#Introduction)
-  * [Current State](#Current-State)
-
 # Introduction
 
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbb ccccccc dddddddddd
