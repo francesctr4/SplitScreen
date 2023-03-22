@@ -26,21 +26,21 @@ All the material provided (handout, solution and presentation) can be downloaded
 ## [Download Provided Material](https://github.com/francesctr4/SplitScreen/archive/refs/heads/main.zip)
 
 ## TODO 1 → [Render.cpp]
-##“Create cameras according to a viewport”
+## “Create cameras according to a viewport”
 
 ## TODO 2 → [Player.cpp]
 ## “Manage players movement and camera”
 
-## TODO 3 → [Scene.cpp] <br> 
+## TODO 3 → [Scene.cpp]
 ## “Instantiate the players in the scene”
 
-## TODO 4 → [Render.cpp] <br> 
+## TODO 4 → [Render.cpp]
 ## “Get the viewport of each active camera”
 
-## TODO 5 → [Render.cpp] <br> 
+## TODO 5 → [Render.cpp]
 ## “Center each active camera to a player”
 
-## TODO 6 → [Scene.cpp] <br> 
+## TODO 6 → [Scene.cpp]
 ## “Create all the necessary cameras”
 
 # Possible Improvements
