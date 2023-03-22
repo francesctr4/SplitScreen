@@ -21,7 +21,9 @@
 
 # Split Screen Handout & Solution
 
-## TODO 1 --> [Render.cpp] “Create cameras according to a viewport”
+
+
+## TODO 1 → [Render.cpp] “Create cameras according to a viewport”
 
 # Possible Improvements
 
