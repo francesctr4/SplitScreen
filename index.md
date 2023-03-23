@@ -106,9 +106,28 @@ and the viewport is the region of the window where the camera can be moved and o
 ## Then, how can we program a Split Screen in SDL2?
 
 ### New features
+
+![image](https://user-images.githubusercontent.com/99948892/227253880-807bd675-0d38-4f83-a1dc-0bdb439be0e3.png)
+
+![image](https://user-images.githubusercontent.com/99948892/227253955-2dee202b-3ad8-4628-95a9-cda8aafe1fba.png)
+
+![image](https://user-images.githubusercontent.com/99948892/227254057-c30509ca-cd9e-4297-bf7b-fd65292e1035.png)
+
 ### Affected modules
+
+
+
 ### New functions
+
+![image](https://user-images.githubusercontent.com/99948892/227254223-6f272fb3-7529-4599-af19-3820a0e95573.png)
+
+![image](https://user-images.githubusercontent.com/99948892/227254275-3f325fdf-0f57-4ea2-93e2-3330123552ee.png)
+
+![image](https://user-images.githubusercontent.com/99948892/227254329-cc233418-41ea-420a-aed0-27a829312cb3.png)
+
 ### Steps to follow
+
+![image](https://user-images.githubusercontent.com/99948892/227254474-9a30f69a-456d-47d0-9bf0-5fcdf9ab2bc9.png)
 
 # Split Screen Handout & Solution
 
