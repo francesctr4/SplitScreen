@@ -107,32 +107,39 @@ and the viewport is the region of the window where the camera can be moved and o
 ### We can’t create multiple cameras.
 ### We can’t create multiple viewports.
 
-
 ## Then, how can we program a Split Screen in SDL2?
 
 ### New features
 
-![image](https://user-images.githubusercontent.com/99948892/227253880-807bd675-0d38-4f83-a1dc-0bdb439be0e3.png)
+![New_Features_1](https://user-images.githubusercontent.com/99948892/227253880-807bd675-0d38-4f83-a1dc-0bdb439be0e3.png)
 
-![image](https://user-images.githubusercontent.com/99948892/227253955-2dee202b-3ad8-4628-95a9-cda8aafe1fba.png)
+![New_Features_2](https://user-images.githubusercontent.com/99948892/227253955-2dee202b-3ad8-4628-95a9-cda8aafe1fba.png)
 
-![image](https://user-images.githubusercontent.com/99948892/227254057-c30509ca-cd9e-4297-bf7b-fd65292e1035.png)
+![New_Features_3](https://user-images.githubusercontent.com/99948892/227254057-c30509ca-cd9e-4297-bf7b-fd65292e1035.png)
 
 ### Affected modules
 
-
+Camera → The camera attribute is now a class.
+Player → Multiple players with different input.
+Scene → The scene will split in n screens.
+Render → Manage multiple viewports and cameras.
 
 ### New functions
 
-![image](https://user-images.githubusercontent.com/99948892/227254223-6f272fb3-7529-4599-af19-3820a0e95573.png)
+![New_Functions_1](https://user-images.githubusercontent.com/99948892/227254223-6f272fb3-7529-4599-af19-3820a0e95573.png)
 
-![image](https://user-images.githubusercontent.com/99948892/227254275-3f325fdf-0f57-4ea2-93e2-3330123552ee.png)
+![New_Functions_2](https://user-images.githubusercontent.com/99948892/227254275-3f325fdf-0f57-4ea2-93e2-3330123552ee.png)
 
-![image](https://user-images.githubusercontent.com/99948892/227254329-cc233418-41ea-420a-aed0-27a829312cb3.png)
+![New_Functions_3](https://user-images.githubusercontent.com/99948892/227254329-cc233418-41ea-420a-aed0-27a829312cb3.png)
 
 ### Steps to follow
 
-![image](https://user-images.githubusercontent.com/99948892/227254474-9a30f69a-456d-47d0-9bf0-5fcdf9ab2bc9.png)
+1. Create the cameras and add them to a list.
+2. Relate the different players with the cameras.
+3. Assign and center the cameras to the players.
+4. Finally, display the desired cameras.
+
+![All_TODOs](https://user-images.githubusercontent.com/99948892/227254474-9a30f69a-456d-47d0-9bf0-5fcdf9ab2bc9.png)
 
 # Split Screen Handout & Solution
 
@@ -143,9 +150,9 @@ All the material provided (handout, solution and presentation) can be downloaded
 ### TODO 1 → [Render.cpp]
 ### “Create cameras according to a viewport”
 
-* First create a Camera* with the viewport defined.
-* Then add the camera to the cameras list.
-* Don’t forget to clear the cameras list.
+* First create a Camera* with the viewport defined
+* Then add the camera to the cameras list
+* Don’t forget to clear the cameras list
 
 ![TODO 1](https://user-images.githubusercontent.com/99948892/227061306-41568d6d-1769-4885-9462-44ebd0c9ced8.png)
 
@@ -162,9 +169,9 @@ All the material provided (handout, solution and presentation) can be downloaded
 ### TODO 3 → [Scene.cpp]
 ### “Instantiate the players in the scene”
 
-* Read the config.xml and retrieve all the player nodes.
-* Then you have to CreateEntity of each player.
-* Don’t forget to add them to the players list.
+* Read the config.xml and retrieve all the player nodes
+* Then you have to CreateEntity of each player
+* Don’t forget to add them to the players list
 
 ![TODO 3](https://user-images.githubusercontent.com/99948892/227061519-a9e45b39-7443-492d-8a9e-3645a7def82a.png)
 
@@ -229,8 +236,8 @@ All the material provided (handout, solution and presentation) can be downloaded
 
 * Ability to change screen display mode mid-game.
 * Render line, circle and text taking into account viewport margins.
-* An algorithm that makes n screens for n players 
-* Can you think of anything else? :D
+* An algorithm that makes n screens for n players.
+* ...
 
 # Conclusions
 
@@ -239,13 +246,13 @@ All the material provided (handout, solution and presentation) can be downloaded
 * Players can see where the other players are.
 * Only one console needed.
 * Only one copy of the game needed.
-* No need for internet access.
-* No internet connection problems.
+* There's no need for internet access.
+* There's no internet connection problems.
 
 ## Disadvantages of the Split Screen
 
-* Smaller screens.
-* Performance issues.
+* Screens are smaller and make visibility more difficult.
+* Rendering more screens causes several performance issues.
 * More distraction, especially from game sounds.
 * Lower active resolution for each player.
 
