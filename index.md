@@ -54,11 +54,11 @@ split-screen has not been used very often because the new frontier of video game
 
 ## Current techniques in the industry
 
-* Standard Split Screen
+### Standard Split Screen
 
 ![Sonic & All-Stars Racing Transformed Collection (2013)](https://user-images.githubusercontent.com/99948892/227247720-c0a9fdf5-3a23-4633-a19b-081b906459b3.png)
 
-* Voronoi Split Screen
+### Voronoi Split Screen
 
 ![Voronoi Split Screen](https://jorgegh2.github.io/Split-screen/Voronoi_2_Players.gif)
 
