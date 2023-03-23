@@ -32,15 +32,24 @@ The Split Screen feature is commonly used in non-networked multiplayer video gam
 
 ## Basic concepts
 
-Window: A separate viewing area on a computer display screen as part of a GUI.
-Render: The process that turns the code you write on an application into something interactive.
-Renderer: The piece of code that turns code instructions into an interactive rendering context.
-Camera: Designates the point of view that the players will have presented on their screens. 
-Viewport: Is a region of the screen used to display a portion of the total image to be shown.
+### Window 
+A separate viewing area on a computer display screen as part of a GUI.
+
+### Render
+The process that turns the code you write on an application into something interactive.
+
+### Renderer
+The piece of code that turns code instructions into an interactive rendering context.
+
+### Camera
+Designates the point of view that the players will have presented on their screens. 
+
+### Viewport
+Is a region of the screen used to display a portion of the total image to be shown.
 
 ## ¿Renderer vs Camera vs Viewport?
 
-
+The difference between 
 
 ## How could we theoretically code a Split Screen?
 
