@@ -103,6 +103,11 @@ and the viewport is the region of the window where the camera can be moved and o
 
 ## In SDL2 we have to look for another way
 
+### We can’t create multiple renderers.
+### We can’t create multiple cameras.
+### We can’t create multiple viewports.
+
+
 ## Then, how can we program a Split Screen in SDL2?
 
 ### New features
