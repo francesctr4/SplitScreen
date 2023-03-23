@@ -49,7 +49,9 @@ Is a region of the screen used to display a portion of the total image to be sho
 
 ## ¿Renderer vs Camera vs Viewport?
 
-The difference between 
+The difference between renderer, camera and viewport is that the renderer is the part of the code that renders the developer's input to the screen, 
+while the camera is a rectangular region delimited by the developer that serves as a magnifying glass to observe the rendered content, 
+and the viewport is the region of the window where the camera can be moved and objects can be rendered.
 
 ## How could we theoretically code a Split Screen?
 
