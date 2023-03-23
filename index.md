@@ -99,11 +99,9 @@ and the viewport is the region of the window where the camera can be moved and o
 
 ## How could we theoretically code a Split Screen?
 
-
+![Split Screen Utopia](https://user-images.githubusercontent.com/99948892/227253435-7ecc7063-1216-4c2a-a99c-e8b1f146c209.png)
 
 ## In SDL2 we have to look for another way
-
-
 
 ## Then, how can we program a Split Screen in SDL2?
 
