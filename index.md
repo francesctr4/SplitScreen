@@ -221,8 +221,8 @@ All the material provided (handout, solution and presentation) can be downloaded
 
 ## Problems of this implementation in SDL2
 
-* Number of screens and their position is hardcoded.
-* Four players appear regardless of how many cameras there are.
+* The number of screens and their position are hardcoded, so to increase the number of screens shown in the window, it would have to be done manually.
+* Four players appear regardless of the number of cameras. This is because the cameras are created first and then the players are instantiated, but by doing it with XML you do not know in advance how many cameras there will be.
 * There's a little visual bug on the edges of the cameras if you pay attention to it.
 
 ## Features you could add to your Split Screen
