@@ -114,16 +114,41 @@ All the material provided (handout, solution and presentation) can be downloaded
 ### Four Screens
 ![FOUR_SCREENS](https://user-images.githubusercontent.com/99948892/227045355-35c6e569-ca34-409d-8882-1036e3aeef22.png)
 
-
 # Possible Improvements
 
 ## Problems of this implementation in SDL2
+
+Number of screens and their position is hardcoded.
+Four players appear regardless of how many cameras there are.
+There's a little visual bug on the edges of the cameras if you pay attention to it.
+
+
 ## Features you could add to your Split Screen
+
+Ability to change screen display mode mid-game.
+Render line, circle and text taking into account viewport margins.
+An algorithm that makes n screens for n players 
+Can you think of anything else? :D
+
 
 # Conclusions
 
 ## Advantages of the Split Screen
+
+Players can see where the other players are.
+Only one console needed.
+Only one copy of the game needed.
+No need for internet access.
+No internet connection problems.
+
+
 ## Disadvantages of the Split Screen
+
+Smaller screens.
+Performance issues.
+More distraction, especially from game sounds.
+Lower active resolution for each player.
+
 
 # References
 
