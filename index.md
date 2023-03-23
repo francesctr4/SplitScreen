@@ -1,10 +1,15 @@
 # Introduction
 
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbb ccccccc dddddddddd
-
 ## What is a Split Screen and what is it used for?
+
+The Split Screen is an audiovisual output display where the screen has been divided into two or more exactly equal areas so that players can explore different areas simultaneously without having to be close to each other.
+
 ## Why is it important to have a Split Screen?
+
+The Split Screen feature is commonly used in non-networked multiplayer video games, also known as couch co-op, and allows multiple people to play on a single device.
+
 ## Context and History
+
 ## Current references
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sf4RgCDbM58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -26,10 +31,31 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbb ccccccc dddddddddd
 # Selected Approach
 
 ## Basic concepts
+
+Window: A separate viewing area on a computer display screen as part of a GUI.
+Render: The process that turns the code you write on an application into something interactive.
+Renderer: The piece of code that turns code instructions into an interactive rendering context.
+Camera: Designates the point of view that the players will have presented on their screens. 
+Viewport: Is a region of the screen used to display a portion of the total image to be shown.
+
 ## ¿Renderer vs Camera vs Viewport?
+
+
+
 ## How could we theoretically code a Split Screen?
-## SDL2 is evil  →  We have to look for another way
+
+
+
+## In SDL2 we have to look for another way
+
+
+
 ## Then, how can we program a Split Screen in SDL2?
+
+### New features
+### Affected modules
+### New functions
+### Steps to follow
 
 # Split Screen Handout & Solution
 
