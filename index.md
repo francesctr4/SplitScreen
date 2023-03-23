@@ -4,17 +4,35 @@
 
 The Split Screen is an audiovisual output display where the screen has been divided into two or more exactly equal areas so that players can explore different areas simultaneously without having to be close to each other.
 
+![F1 2021 Split Screen](https://user-images.githubusercontent.com/99948892/227244798-628ae660-a067-4f6b-a617-acba9d766183.png)
+
 ## Why is it important to have a Split Screen?
 
 The Split Screen feature is commonly used in non-networked multiplayer video games, also known as couch co-op, and allows multiple people to play on a single device.
 
+![Mario Kart 8 Deluxe Split Screen](https://user-images.githubusercontent.com/99948892/227245049-b9618d18-b295-43f7-b1ca-21391522dc6a.png)
+
 ## Context and History
 
-Split screen gaming is said to have originated in the mid 1980's, there are no notable games that can be found to have it until 1991 when Lemming was released 
-for Commodore's Amiga. It was the first Amiga game to support two simultaneous players with a split screen on the same computer while players used separate mice.
-However split screen gaming wasn't popularized until GoldenEye 007 in 1997, allowing players to take place in a four person deathmatch on the same screen. 
-The game was said to begin a split screen craze. Continued in 2001 with Halo: Combat Evolved on the XBOX, leading other shooters to pick up the trend, such 
-as Gears of War and Call of Duty.
+Split screen gaming is said to have originated in the mid 1980's
+
+![Bloodwych (1989)](https://user-images.githubusercontent.com/99948892/227245225-0f74d12b-ffd7-45aa-adda-d0d8676cea9e.png)
+
+![Lotus Esprit Turbo Challenge (1990)](https://user-images.githubusercontent.com/99948892/227245318-3fb740f9-239b-4dd3-b1f2-267bf2cefc4e.png)
+
+When Lemming was released for Commodore's Amiga (1991), it was the first Amiga game to support two simultaneous players with a split screen on the 
+same computer while players used separate mice. However split screen gaming wasn't popularized until GoldenEye 007 in 1997, allowing players to take 
+place in a four person deathmatch on the same screen. The game was said to begin a Split Screen craze.
+
+![Lemming (1991)](https://user-images.githubusercontent.com/99948892/227245386-1c0a6f85-b01e-4a7d-a9ea-833c2da5c8a5.png)
+
+![GoldenEye 007 (1997)](https://user-images.githubusercontent.com/99948892/227245490-f60f4eac-00de-4249-a313-4c5ccea8e45c.png)
+
+Continued in 2001 with Halo: Combat Evolved on the XBOX, leading other shooters to pick up the trend, such as Gears of War and Call of Duty.
+
+![Halo: Combat Evolved (2001)](https://user-images.githubusercontent.com/99948892/227245606-a8a063fd-e0d4-4050-893c-8ce6439d1694.png)
+
+![Call of Duty 2 (2005)](https://user-images.githubusercontent.com/99948892/227245700-d1f9916a-974d-4759-a3e3-857187098987.png)
 
 ## Current references
 
@@ -36,7 +54,15 @@ split-screen has not been used very often because the new frontier of video game
 
 ## Current techniques in the industry
 
+* Standard Split Screen
 
+![Sonic & All-Stars Racing Transformed Collection (2013)](https://user-images.githubusercontent.com/99948892/227247720-c0a9fdf5-3a23-4633-a19b-081b906459b3.png)
+
+* Voronoi Split Screen
+
+
+
+![Lego Batman 3: Beyond Gotham (2014)](https://user-images.githubusercontent.com/99948892/227248245-05c2b3ad-2b68-452a-909c-90fa023fe42a.png)
 
 ## Split Screen in other game engines
 
