@@ -10,7 +10,15 @@ The Split Screen feature is commonly used in non-networked multiplayer video gam
 
 ## Context and History
 
+Split screen gaming is said to have originated in the mid 1980's, there are no notable games that can be found to have it until 1991 when Lemming was released 
+for Commodore's Amiga. It was the first Amiga game to support two simultaneous players with a split screen on the same computer while players used separate mice.
+However split screen gaming wasn't popularized until GoldenEye 007 in 1997, allowing players to take place in a four person deathmatch on the same screen. 
+The game was said to begin a split screen craze. Continued in 2001 with Halo: Combat Evolved on the XBOX, leading other shooters to pick up the trend, such 
+as Gears of War and Call of Duty.
+
 ## Current references
+
+Currently in the industry, we can observe recent games that use Split Screen. Here are some examples:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sf4RgCDbM58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -19,7 +27,17 @@ The Split Screen feature is commonly used in non-networked multiplayer video gam
 # Current State
 
 ## Technical evolution of the Split Screen
+
+This has historically been very popular on consoles, which until the 2000s did not have access to the internet or any other network, 
+and is less common today with modern support for console-to-console online multiplayer.
+
+Split-screen is useful for those who want to play with other players, but with only one console. In recent years, 
+split-screen has not been used very often because the new frontier of video games is to play with other players online, without sharing a screen.
+
 ## Current techniques in the industry
+
+
+
 ## Split Screen in other game engines
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rw2VKAdTdgQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
