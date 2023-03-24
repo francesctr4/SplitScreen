@@ -153,11 +153,17 @@ and multiple cameras and viewports can be supported, but only if we code them wi
 
 ### New features
 
-dvfdvdvvdvdvdvdvdvdvvdv
+In order to create my implementation of the Split Screen, I have added the following features to the code:
+
+* New Camera Class
 
 ![New_Features_1](https://user-images.githubusercontent.com/99948892/227253880-807bd675-0d38-4f83-a1dc-0bdb439be0e3.png)
 
+* New Players
+
 ![New_Features_2](https://user-images.githubusercontent.com/99948892/227253955-2dee202b-3ad8-4628-95a9-cda8aafe1fba.png)
+
+* New Map
 
 ![New_Features_3](https://user-images.githubusercontent.com/99948892/227254057-c30509ca-cd9e-4297-bf7b-fd65292e1035.png)
 
