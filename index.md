@@ -40,7 +40,7 @@ Continued in 2001 with Halo: Combat Evolved on the XBOX, leading other shooters 
 
 ## Current references
 
-Currently in the industry, we can observe recent games that use Split Screen. Here are some examples:
+Currently in the industry, we can observe recent games that use Split Screen. Here are some videos that show current examples:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sf4RgCDbM58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
