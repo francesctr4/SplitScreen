@@ -176,11 +176,15 @@ In order to create my implementation of the Split Screen, I have added the follo
 
 ### New functions
 
-scdssdscsccs
+* [Render.cpp]
 
 ![New_Functions_1](https://user-images.githubusercontent.com/99948892/227254223-6f272fb3-7529-4599-af19-3820a0e95573.png)
 
+* [Player.cpp]
+
 ![New_Functions_2](https://user-images.githubusercontent.com/99948892/227254275-3f325fdf-0f57-4ea2-93e2-3330123552ee.png)
+
+* [Scene.cpp]
 
 ![New_Functions_3](https://user-images.githubusercontent.com/99948892/227254329-cc233418-41ea-420a-aed0-27a829312cb3.png)
 
