@@ -18,31 +18,41 @@ Here's an exmple of Mario Kart 8 Deluxe Split Screen for four players:
 
 ## Context and History
 
-Split screen gaming is said to have originated in the mid 1980's
+The Split Screen gaming is said to have originated in the mid 1980's, when early home consoles like the Atari 2600 and the Intellivision featured games that could be played by two players on the same screen:
 
 ![Bloodwych (1989)](https://user-images.githubusercontent.com/99948892/227245225-0f74d12b-ffd7-45aa-adda-d0d8676cea9e.png)
+_Bloodwych (1989)_
 
 ![Lotus Esprit Turbo Challenge (1990)](https://user-images.githubusercontent.com/99948892/227245318-3fb740f9-239b-4dd3-b1f2-267bf2cefc4e.png)
+_Lotus Esprit Turbo Challenge (1990)_
 
-When Lemming was released for Commodore's Amiga (1991), it was the first Amiga game to support two simultaneous players with a split screen on the 
-same computer while players used separate mice. However split screen gaming wasn't popularized until GoldenEye 007 in 1997, allowing players to take 
-place in a four person deathmatch on the same screen. The game was said to begin a Split Screen craze.
+When Lemming was released for Commodore's Amiga (1991), it was the first Amiga game to support two simultaneous players with a Split Screen on the 
+same computer while players used separate mice. However Split Screen gaming wasn't popularized until GoldenEye 007 in 1997, allowing players to take 
+place in a four person deathmatch on the same screen:
 
 ![Lemming (1991)](https://user-images.githubusercontent.com/99948892/227245386-1c0a6f85-b01e-4a7d-a9ea-833c2da5c8a5.png)
+_Lemming (1991)_
 
 ![GoldenEye 007 (1997)](https://user-images.githubusercontent.com/99948892/227248629-d8a75ddc-bd98-4193-9868-865b7cc243fe.png)
+_GoldenEye 007 (1997)_
 
-Continued in 2001 with Halo: Combat Evolved on the XBOX, leading other shooters to pick up the trend, such as Gears of War and Call of Duty.
+Continued in 2001 with Halo: Combat Evolved on the XBOX, leading other shooters to pick up the trend, such as Gears of War and Call of Duty:
 
 ![Halo: Combat Evolved (2001)](https://user-images.githubusercontent.com/99948892/227245606-a8a063fd-e0d4-4050-893c-8ce6439d1694.png)
+_Halo: Combat Evolved (2001)_
 
 ![Call of Duty 2 (2005)](https://user-images.githubusercontent.com/99948892/227245700-d1f9916a-974d-4759-a3e3-857187098987.png)
+_Call of Duty 2 (2005)_
 
 ## Current references
 
 Currently in the industry, we can observe recent games that use Split Screen. Here are some videos that show current examples:
 
+### Rocket League (2015)
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sf4RgCDbM58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### It Takes Two (2021)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GAWHzGNcTEw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -50,31 +60,51 @@ Currently in the industry, we can observe recent games that use Split Screen. He
 
 ## Technical evolution of the Split Screen
 
-This has historically been very popular on consoles, which until the 2000s did not have access to the internet or any other network, 
-and is less common today with modern support for console-to-console online multiplayer.
+The Split Screen technique has historically been very popular on consoles, which until the 2000s did not have access to the internet or any other network.
+However, it is less commmon today with modern support for console-to-console online multiplayer. 
 
-Split-screen is useful for those who want to play with other players, but with only one console. In recent years, 
-split-screen has not been used very often because the new frontier of video games is to play with other players online, without sharing a screen.
+The Split Screen is useful for those who want to play with other players, but with only one console. In recent years, this has not been used very often because 
+the new frontier of video games is to play with other players online, without sharing a screen.
 
 ## Current techniques in the industry
 
 ### Standard Split Screen
 
+By standard split screen we mean the common split screen, where the regions are divided equally for all players.
+
+Here you can see an example of the Sonic & All-Stars Racing Transformed Collection Split Screen:
+
 ![Sonic & All-Stars Racing Transformed Collection (2013)](https://user-images.githubusercontent.com/99948892/227247720-c0a9fdf5-3a23-4633-a19b-081b906459b3.png)
 
 ### Voronoi Split Screen
 
+The Voronoi Split Screen is a variant of the Standard Split Screen. This effect divides the screen into multiple regions based on the proximity between the players or to different objects or points of interest in the game world. It is often used in coop multiplayer games to provide a more immersive and engaging gaming experience, as well as a more stylish version of the casual Split Screen.
+
+You can see an example of this type of Split Screen in the .gif below:
+
 ![Voronoi Split Screen](https://jorgegh2.github.io/Split-screen/Voronoi_2_Players.gif)
+
+And here you can see an example of a game that uses this technique, Lego Batman 3: Beyond Gotham Split Screen:
 
 ![Lego Batman 3: Beyond Gotham (2014)](https://user-images.githubusercontent.com/99948892/227248245-05c2b3ad-2b68-452a-909c-90fa023fe42a.png)
 
 ## Split Screen in other game engines
 
+In this section we can find several videos on how to add a Split Screen to our games in other game engines, such as Unity, Unreal and Godot:
+
+### Unity
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rw2VKAdTdgQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### Unreal
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ipU4MtV-O_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+### Godot
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1XdjHIshYY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+If you spend some time watching the videos, you will realise that it is relatively easy to make a Split Screen in the current game engines on the market. However, in SDL this is a bit more complicated.
 
 # Selected Approach
 
@@ -103,13 +133,21 @@ and the viewport is the region of the window where the camera can be moved and o
 
 ## How could we theoretically code a Split Screen?
 
+Theoretically, to code a Split Screen, it would be enough to multiply the number of elements on screen by the number of cameras needed, 
+and then rearrange the cameras to show them equally on screen.
+
 ![Split Screen Utopia](https://user-images.githubusercontent.com/99948892/227253435-7ecc7063-1216-4c2a-a99c-e8b1f146c209.png)
+
+But in SDL2, it is not so easy...
 
 ## In SDL2 we have to look for another way
 
 ### We can’t create multiple renderers.
 ### We can’t create multiple cameras.
 ### We can’t create multiple viewports.
+
+At least, we can't create multiple elements directly, by simply declaring them. We have to take into account that SDL only supports 1 renderer, 
+and multiple cameras and viewports can be supported, but only if we code them carefully
 
 ## Then, how can we program a Split Screen in SDL2?
 
