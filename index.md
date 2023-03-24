@@ -4,11 +4,15 @@
 
 The Split Screen is an audiovisual output display where the screen has been divided into two or more exactly equal areas so that players can explore different areas simultaneously without having to be close to each other.
 
+Here's an example of F1 2021 Split Screen for two players:
+
 ![F1 2021 Split Screen](https://user-images.githubusercontent.com/99948892/227244798-628ae660-a067-4f6b-a617-acba9d766183.png)
 
 ## Why is it important to have a Split Screen?
 
 The Split Screen feature is commonly used in non-networked multiplayer video games, also known as couch co-op, and allows multiple people to play on a single device.
+
+Here's an exmple of Mario Kart 8 Deluxe Split Screen:
 
 ![Mario Kart 8 Deluxe Split Screen](https://user-images.githubusercontent.com/99948892/227245049-b9618d18-b295-43f7-b1ca-21391522dc6a.png)
 
