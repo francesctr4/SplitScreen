@@ -12,7 +12,7 @@ Here's an example of F1 2021 Split Screen for two players:
 
 The Split Screen feature is commonly used in non-networked multiplayer video games, also known as couch co-op, and allows multiple people to play on a single device.
 
-Here's an exmple of Mario Kart 8 Deluxe Split Screen:
+Here's an exmple of Mario Kart 8 Deluxe Split Screen for four players:
 
 ![Mario Kart 8 Deluxe Split Screen](https://user-images.githubusercontent.com/99948892/227245049-b9618d18-b295-43f7-b1ca-21391522dc6a.png)
 
