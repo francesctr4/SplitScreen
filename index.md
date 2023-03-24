@@ -21,9 +21,11 @@ Here's an exmple of Mario Kart 8 Deluxe Split Screen for four players:
 The Split Screen gaming is said to have originated in the mid 1980's, when early home consoles like the Atari 2600 and the Intellivision featured games that could be played by two players on the same screen:
 
 ![Bloodwych (1989)](https://user-images.githubusercontent.com/99948892/227245225-0f74d12b-ffd7-45aa-adda-d0d8676cea9e.png)
+
 _Bloodwych (1989)_
 
 ![Lotus Esprit Turbo Challenge (1990)](https://user-images.githubusercontent.com/99948892/227245318-3fb740f9-239b-4dd3-b1f2-267bf2cefc4e.png)
+
 _Lotus Esprit Turbo Challenge (1990)_
 
 When Lemming was released for Commodore's Amiga (1991), it was the first Amiga game to support two simultaneous players with a Split Screen on the 
@@ -31,17 +33,21 @@ same computer while players used separate mice. However Split Screen gaming wasn
 place in a four person deathmatch on the same screen:
 
 ![Lemming (1991)](https://user-images.githubusercontent.com/99948892/227245386-1c0a6f85-b01e-4a7d-a9ea-833c2da5c8a5.png)
+
 _Lemming (1991)_
 
 ![GoldenEye 007 (1997)](https://user-images.githubusercontent.com/99948892/227248629-d8a75ddc-bd98-4193-9868-865b7cc243fe.png)
+
 _GoldenEye 007 (1997)_
 
 Continued in 2001 with Halo: Combat Evolved on the XBOX, leading other shooters to pick up the trend, such as Gears of War and Call of Duty:
 
 ![Halo: Combat Evolved (2001)](https://user-images.githubusercontent.com/99948892/227245606-a8a063fd-e0d4-4050-893c-8ce6439d1694.png)
+
 _Halo: Combat Evolved (2001)_
 
 ![Call of Duty 2 (2005)](https://user-images.githubusercontent.com/99948892/227245700-d1f9916a-974d-4759-a3e3-857187098987.png)
+
 _Call of Duty 2 (2005)_
 
 ## Current references
