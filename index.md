@@ -111,19 +111,19 @@ If you spend some time watching the videos, you will realise that it is relative
 ## Basic concepts
 
 ### Window 
-A separate viewing area on a computer display screen as part of a GUI.
+The Window is a separate viewing area on a computer display screen as part of a GUI.
 
 ### Render
-The process that turns the code you write on an application into something interactive.
+To Render is the process that turns the code you write on an application into something visible and/or interactive on screen.
 
 ### Renderer
-The piece of code that turns code instructions into an interactive rendering context.
+The Renderer is the piece of code that turns code instructions into an interactive rendering context.
 
 ### Camera
-Designates the point of view that the players will have presented on their screens. 
+The Camera designates the point of view that the players will have presented on their screens. 
 
 ### Viewport
-Is a region of the screen used to display a portion of the total image to be shown.
+The Viewport is a region of the screen used to display a portion of the total image to be shown.
 
 ## ¿Renderer vs Camera vs Viewport?
 
@@ -147,7 +147,7 @@ But in SDL2, it is not so easy...
 ### We can’t create multiple viewports.
 
 At least, we can't create multiple elements directly, by simply declaring them. We have to take into account that SDL only supports 1 renderer, 
-and multiple cameras and viewports can be supported, but only if we code them carefully
+and multiple cameras and viewports can be supported, but only if we code them with classes and several reusable functions.
 
 ## Then, how can we program a Split Screen in SDL2?
 
