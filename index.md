@@ -153,6 +153,8 @@ and multiple cameras and viewports can be supported, but only if we code them wi
 
 ### New features
 
+dvfdvdvvdvdvdvdvdvdvvdv
+
 ![New_Features_1](https://user-images.githubusercontent.com/99948892/227253880-807bd675-0d38-4f83-a1dc-0bdb439be0e3.png)
 
 ![New_Features_2](https://user-images.githubusercontent.com/99948892/227253955-2dee202b-3ad8-4628-95a9-cda8aafe1fba.png)
@@ -161,12 +163,14 @@ and multiple cameras and viewports can be supported, but only if we code them wi
 
 ### Affected modules
 
-Camera → The camera attribute is now a class.
-Player → Multiple players with different input.
-Scene → The scene will split in n screens.
-Render → Manage multiple viewports and cameras.
+* Camera → The camera attribute is now a class.
+* Player → Multiple players with different input.
+* Scene → The scene will split in n screens.
+* Render → Manage multiple viewports and cameras.
 
 ### New functions
+
+scdssdscsccs
 
 ![New_Functions_1](https://user-images.githubusercontent.com/99948892/227254223-6f272fb3-7529-4599-af19-3820a0e95573.png)
 
@@ -176,10 +180,14 @@ Render → Manage multiple viewports and cameras.
 
 ### Steps to follow
 
+The overall steps to code a Split Screen in SDL2 are shown below:
+
 1. Create the cameras and add them to a list.
 2. Relate the different players with the cameras.
 3. Assign and center the cameras to the players.
 4. Finally, display the desired cameras.
+
+Here you can find the location of the TODOs inside the code:
 
 ![All_TODOs](https://user-images.githubusercontent.com/99948892/227254474-9a30f69a-456d-47d0-9bf0-5fcdf9ab2bc9.png)
 
